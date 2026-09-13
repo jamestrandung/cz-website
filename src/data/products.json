@@ -1,0 +1,3197 @@
+{
+  "schemaVersion": 1,
+  "currency": "VND",
+  "contentStatus": "pdf-imported",
+  "categories": [
+    {
+      "id": "signature",
+      "name": {
+        "vi": "Món tủ của Cà",
+        "en": "Signatures"
+      },
+      "subtitle": {
+        "vi": "Những món tủ nhà Cà.",
+        "en": "Our signature drinks."
+      }
+    },
+    {
+      "id": "coffee",
+      "name": {
+        "vi": "Cà phê",
+        "en": "Coffee"
+      },
+      "subtitle": {
+        "vi": "Cà phê phin Việt Nam.",
+        "en": "Vietnamese drip coffee."
+      }
+    },
+    {
+      "id": "tea",
+      "name": {
+        "vi": "Trà trái cây",
+        "en": "Fruit tea"
+      },
+      "subtitle": {
+        "vi": "Trái cây kết hợp cùng trà.",
+        "en": "Fruit-based teas."
+      }
+    },
+    {
+      "id": "milk-tea",
+      "name": {
+        "vi": "Trà sữa đậm vị",
+        "en": "Milk tea"
+      },
+      "subtitle": {
+        "vi": "Trà sữa và những vị quen.",
+        "en": "Milk tea favorites."
+      }
+    },
+    {
+      "id": "matcha",
+      "name": {
+        "vi": "Liều thuốc tâm hồn",
+        "en": "Matcha & cacao"
+      },
+      "subtitle": {
+        "vi": "Matcha, cacao và một chút dịu dàng.",
+        "en": "Soul-soothing matcha and cacao."
+      }
+    },
+    {
+      "id": "healthy",
+      "name": {
+        "vi": "Sống khoẻ",
+        "en": "Fruity & healthy"
+      },
+      "subtitle": {
+        "vi": "Trà, trái cây và thảo mộc.",
+        "en": "Fruit, tea and herbal drinks."
+      }
+    },
+    {
+      "id": "food",
+      "name": {
+        "vi": "Chống đói",
+        "en": "Something savory"
+      },
+      "subtitle": {
+        "vi": "Nạp năng lượng, làm tiếp thôi.",
+        "en": "Stay energized, stay focused."
+      }
+    },
+    {
+      "id": "sweet",
+      "name": {
+        "vi": "Chống buồn miệng",
+        "en": "Snacks & treats"
+      },
+      "subtitle": {
+        "vi": "Món mặn, món ngọt cho giờ nghỉ.",
+        "en": "Sweet and savory little breaks."
+      }
+    },
+    {
+      "id": "toppings",
+      "name": {
+        "vi": "Topping",
+        "en": "Toppings"
+      },
+      "subtitle": {
+        "vi": "Thêm một chút đúng gu.",
+        "en": "A little extra for your drink."
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "bac-xiu",
+      "categoryId": "coffee",
+      "name": {
+        "vi": "Bạc xỉu",
+        "en": "White coffee"
+      },
+      "summary": {
+        "vi": "Cà phê và sữa.",
+        "en": "Vietnamese coffee with milk."
+      },
+      "description": {
+        "vi": "Cà phê và sữa.",
+        "en": "Vietnamese coffee with milk."
+      },
+      "image": "/images/white-coffee.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ bạc xỉu",
+        "en": "Illustration of white coffee"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "s-cold",
+          "label": {
+            "vi": "S · Đá",
+            "en": "S · Iced"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S",
+            "temperature": "cold"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m-cold",
+          "label": {
+            "vi": "M · Đá",
+            "en": "M · Iced"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "size": "M",
+            "temperature": "cold"
+          },
+          "benefits": []
+        },
+        {
+          "id": "hot",
+          "label": {
+            "vi": "Nóng",
+            "en": "Hot"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "hot"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "phin-cam",
+      "categoryId": "coffee",
+      "name": {
+        "vi": "Phin cam",
+        "en": "Orange coffee"
+      },
+      "summary": {
+        "vi": "Cà phê kết hợp cam.",
+        "en": "Vietnamese coffee with orange."
+      },
+      "description": {
+        "vi": "Cà phê kết hợp cam.",
+        "en": "Vietnamese coffee with orange."
+      },
+      "image": "/images/orange-coffee.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ phin cam",
+        "en": "Illustration of orange coffee"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "m-cold",
+          "label": {
+            "vi": "M · Đá",
+            "en": "M · Iced"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "size": "M",
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "phin-sua",
+      "categoryId": "coffee",
+      "name": {
+        "vi": "Phin sữa",
+        "en": "Brown coffee"
+      },
+      "summary": {
+        "vi": "Cà phê phin với sữa.",
+        "en": "Vietnamese drip coffee with milk."
+      },
+      "description": {
+        "vi": "Cà phê phin với sữa.",
+        "en": "Vietnamese drip coffee with milk."
+      },
+      "image": "/images/white-coffee.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ phin sữa",
+        "en": "Illustration of brown coffee"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "m-cold",
+          "label": {
+            "vi": "M · Đá",
+            "en": "M · Iced"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "M",
+            "temperature": "cold"
+          },
+          "benefits": []
+        },
+        {
+          "id": "hot",
+          "label": {
+            "vi": "Nóng",
+            "en": "Hot"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "hot"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "phin-den",
+      "categoryId": "coffee",
+      "name": {
+        "vi": "Phin đen",
+        "en": "Black coffee"
+      },
+      "summary": {
+        "vi": "Cà phê phin đen.",
+        "en": "Vietnamese black drip coffee."
+      },
+      "description": {
+        "vi": "Cà phê phin đen.",
+        "en": "Vietnamese black drip coffee."
+      },
+      "image": "/images/black-coffee.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ phin đen",
+        "en": "Illustration of black coffee"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "m-cold",
+          "label": {
+            "vi": "M · Đá",
+            "en": "M · Iced"
+          },
+          "price": 50000,
+          "availability": "available",
+          "attributes": {
+            "size": "M",
+            "temperature": "cold"
+          },
+          "benefits": []
+        },
+        {
+          "id": "hot",
+          "label": {
+            "vi": "Nóng",
+            "en": "Hot"
+          },
+          "price": 50000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "hot"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "phin-cano",
+      "categoryId": "coffee",
+      "name": {
+        "vi": "Phin cano",
+        "en": "Viet Americano"
+      },
+      "summary": {
+        "vi": "Cà phê phin kiểu Americano.",
+        "en": "An Americano-style Vietnamese coffee."
+      },
+      "description": {
+        "vi": "Cà phê phin kiểu Americano.",
+        "en": "An Americano-style Vietnamese coffee."
+      },
+      "image": "/images/black-coffee.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ phin cano",
+        "en": "Illustration of viet americano"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "m-cold",
+          "label": {
+            "vi": "M · Đá",
+            "en": "M · Iced"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {
+            "size": "M",
+            "temperature": "cold"
+          },
+          "benefits": []
+        },
+        {
+          "id": "hot",
+          "label": {
+            "vi": "Nóng",
+            "en": "Hot"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "hot"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "ca-phe-oreo",
+      "categoryId": "signature",
+      "name": {
+        "vi": "Cà phê Oreo",
+        "en": "Oreo coffee"
+      },
+      "summary": {
+        "vi": "Cà phê kết hợp Oreo.",
+        "en": "Coffee with Oreo."
+      },
+      "description": {
+        "vi": "Cà phê kết hợp Oreo.",
+        "en": "Coffee with Oreo."
+      },
+      "image": "/images/cacao.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ cà phê oreo",
+        "en": "Illustration of oreo coffee"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "matcha-taro",
+      "categoryId": "signature",
+      "name": {
+        "vi": "Matcha khoai môn",
+        "en": "Taro matcha"
+      },
+      "summary": {
+        "vi": "Matcha kết hợp khoai môn.",
+        "en": "Matcha with taro paste."
+      },
+      "description": {
+        "vi": "Matcha kết hợp khoai môn.",
+        "en": "Matcha with taro paste."
+      },
+      "image": "/images/taro-matcha.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ matcha khoai môn",
+        "en": "Illustration of taro matcha"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "dua-may-taro",
+      "categoryId": "signature",
+      "name": {
+        "vi": "Dừa mây khoai môn",
+        "en": "Coconut with taro cloud"
+      },
+      "summary": {
+        "vi": "Nước dừa với kem mây khoai môn.",
+        "en": "Coconut water with taro cloud foam."
+      },
+      "description": {
+        "vi": "Nước dừa với kem mây khoai môn.",
+        "en": "Coconut water with taro cloud foam."
+      },
+      "image": "/images/taro-matcha.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ dừa mây khoai môn",
+        "en": "Illustration of coconut with taro cloud"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "cacao-muoi",
+      "categoryId": "signature",
+      "name": {
+        "vi": "Cacao muối Huế",
+        "en": "Huế salted cacao"
+      },
+      "summary": {
+        "vi": "Cacao với kem sữa muối.",
+        "en": "Cacao with salted milk foam."
+      },
+      "description": {
+        "vi": "Cacao với kem sữa muối.",
+        "en": "Cacao with salted milk foam."
+      },
+      "image": "/images/cacao.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ cacao muối huế",
+        "en": "Illustration of huế salted cacao"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "ca-phe-muoi",
+      "categoryId": "signature",
+      "name": {
+        "vi": "Cà phê muối Huế",
+        "en": "Huế salted coffee"
+      },
+      "summary": {
+        "vi": "Cà phê với kem sữa muối Huế.",
+        "en": "Coffee with Huế-style salted milk foam."
+      },
+      "description": {
+        "vi": "Cà phê với kem sữa muối Huế.",
+        "en": "Coffee with Huế-style salted milk foam."
+      },
+      "image": "/images/salted-coffee.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ cà phê muối huế",
+        "en": "Illustration of huế salted coffee"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "tra-buoi",
+      "categoryId": "tea",
+      "name": {
+        "vi": "Trà bưởi Aiyu",
+        "en": "Pomelo Aiyu tea"
+      },
+      "summary": {
+        "vi": "Trà bưởi với thạch Aiyu.",
+        "en": "Pomelo tea with Aiyu jelly."
+      },
+      "description": {
+        "vi": "Trà bưởi với thạch Aiyu.",
+        "en": "Pomelo tea with Aiyu jelly."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà bưởi aiyu",
+        "en": "Illustration of pomelo aiyu tea"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 70000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tra-chanh-day",
+      "categoryId": "tea",
+      "name": {
+        "vi": "Trà chanh dây tắc xí muội",
+        "en": "Passion fruit, calamansi & plum tea"
+      },
+      "summary": {
+        "vi": "Trà xanh kết hợp chanh dây, tắc và xí muội.",
+        "en": "Green tea with passion fruit, calamansi and preserved plum."
+      },
+      "description": {
+        "vi": "Trà xanh kết hợp chanh dây, tắc và xí muội.",
+        "en": "Green tea with passion fruit, calamansi and preserved plum."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà chanh dây tắc xí muội",
+        "en": "Illustration of passion fruit, calamansi & plum tea"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "tra-dao-sa",
+      "categoryId": "tea",
+      "name": {
+        "vi": "Trà đào sả",
+        "en": "Peach lemongrass tea"
+      },
+      "summary": {
+        "vi": "Trà đào kết hợp sả.",
+        "en": "Peach tea with lemongrass."
+      },
+      "description": {
+        "vi": "Trà đào kết hợp sả.",
+        "en": "Peach tea with lemongrass."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà đào sả",
+        "en": "Illustration of peach lemongrass tea"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tra-thanh-vai",
+      "categoryId": "tea",
+      "name": {
+        "vi": "Trà thanh vải",
+        "en": "Lychee tea"
+      },
+      "summary": {
+        "vi": "Trà trái cây vị vải.",
+        "en": "Lychee fruit tea."
+      },
+      "description": {
+        "vi": "Trà trái cây vị vải.",
+        "en": "Lychee fruit tea."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà thanh vải",
+        "en": "Illustration of lychee tea"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thanh-tra-mat-ong",
+      "categoryId": "tea",
+      "name": {
+        "vi": "Thanh trà mật ong hạt đác",
+        "en": "Honey & palm seed chrysanthemum tea"
+      },
+      "summary": {
+        "vi": "Trà hoa cúc, mật ong và hạt đác.",
+        "en": "Chrysanthemum tea with honey and palm seeds."
+      },
+      "description": {
+        "vi": "Trà hoa cúc, mật ong và hạt đác.",
+        "en": "Chrysanthemum tea with honey and palm seeds."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ thanh trà mật ong hạt đác",
+        "en": "Illustration of honey & palm seed chrysanthemum tea"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "tra-sua-hanh-nhan",
+      "categoryId": "milk-tea",
+      "name": {
+        "vi": "Trà sữa milkfoam hạnh nhân nướng",
+        "en": "Almond milk foam oolong milk tea"
+      },
+      "summary": {
+        "vi": "Trà sữa ô long, milkfoam và hạnh nhân nướng.",
+        "en": "Oolong milk tea with milk foam and toasted almonds."
+      },
+      "description": {
+        "vi": "Trà sữa ô long, milkfoam và hạnh nhân nướng.",
+        "en": "Oolong milk tea with milk foam and toasted almonds."
+      },
+      "image": "/images/milk-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà sữa milkfoam hạnh nhân nướng",
+        "en": "Illustration of almond milk foam oolong milk tea"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG1"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 70000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tra-sua-taro",
+      "categoryId": "milk-tea",
+      "name": {
+        "vi": "Trà sữa khoai môn",
+        "en": "Taro oolong milk tea"
+      },
+      "summary": {
+        "vi": "Trà sữa ô long với khoai môn.",
+        "en": "Oolong milk tea with taro paste."
+      },
+      "description": {
+        "vi": "Trà sữa ô long với khoai môn.",
+        "en": "Oolong milk tea with taro paste."
+      },
+      "image": "/images/milk-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà sữa khoai môn",
+        "en": "Illustration of taro oolong milk tea"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": ["TG1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "tra-sua-nhai",
+      "categoryId": "milk-tea",
+      "name": {
+        "vi": "Trà sữa nhài",
+        "en": "Jasmine milk tea"
+      },
+      "summary": {
+        "vi": "Trà nhài kết hợp sữa.",
+        "en": "Jasmine tea with milk."
+      },
+      "description": {
+        "vi": "Trà nhài kết hợp sữa.",
+        "en": "Jasmine tea with milk."
+      },
+      "image": "/images/milk-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà sữa nhài",
+        "en": "Illustration of jasmine milk tea"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG1"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tra-sua-olong",
+      "categoryId": "milk-tea",
+      "name": {
+        "vi": "Trà sữa ô long",
+        "en": "Oolong milk tea"
+      },
+      "summary": {
+        "vi": "Trà ô long kết hợp sữa.",
+        "en": "Oolong tea with milk."
+      },
+      "description": {
+        "vi": "Trà ô long kết hợp sữa.",
+        "en": "Oolong tea with milk."
+      },
+      "image": "/images/milk-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà sữa ô long",
+        "en": "Illustration of oolong milk tea"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": ["TG1"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tra-nhai-macchiato",
+      "categoryId": "milk-tea",
+      "name": {
+        "vi": "Trà nhài macchiato",
+        "en": "Jasmine tea with milk foam"
+      },
+      "summary": {
+        "vi": "Trà nhài với milkfoam.",
+        "en": "Jasmine tea topped with milk foam."
+      },
+      "description": {
+        "vi": "Trà nhài với milkfoam.",
+        "en": "Jasmine tea topped with milk foam."
+      },
+      "image": "/images/milk-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà nhài macchiato",
+        "en": "Illustration of jasmine tea with milk foam"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG1"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 50000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matcha-oreo",
+      "categoryId": "matcha",
+      "name": {
+        "vi": "Matcha Oreo",
+        "en": "Oreo matcha latte"
+      },
+      "summary": {
+        "vi": "Matcha latte kết hợp Oreo.",
+        "en": "Matcha latte with Oreo."
+      },
+      "description": {
+        "vi": "Matcha latte kết hợp Oreo.",
+        "en": "Matcha latte with Oreo."
+      },
+      "image": "/images/matcha.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ matcha oreo",
+        "en": "Illustration of oreo matcha latte"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "milk",
+          "label": {
+            "vi": "Lựa chọn sữa",
+            "en": "Milk choice"
+          },
+          "kind": "substitution",
+          "minSelections": 0,
+          "maxSelections": 1,
+          "choices": [
+            {
+              "id": "oat",
+              "label": {
+                "vi": "Sữa yến mạch",
+                "en": "Oat milk"
+              },
+              "priceDelta": 0,
+              "maxQuantity": 1
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 70000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": [
+            {
+              "id": "free-oat",
+              "kind": "substitution",
+              "label": {
+                "vi": "Đổi sữa yến mạch miễn phí",
+                "en": "Free oat milk swap"
+              },
+              "groupId": "milk",
+              "choiceIds": ["oat"],
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matcha-coco-cloud",
+      "categoryId": "matcha",
+      "name": {
+        "vi": "Matcha coco kem mây",
+        "en": "Matcha coconut cloud"
+      },
+      "summary": {
+        "vi": "Matcha, nước dừa và kem mây.",
+        "en": "Matcha with coconut water and cloud foam."
+      },
+      "description": {
+        "vi": "Matcha, nước dừa và kem mây.",
+        "en": "Matcha with coconut water and cloud foam."
+      },
+      "image": "/images/matcha.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ matcha coco kem mây",
+        "en": "Illustration of matcha coconut cloud"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "cacao-oreo",
+      "categoryId": "matcha",
+      "name": {
+        "vi": "Cacao Oreo",
+        "en": "Oreo cacao"
+      },
+      "summary": {
+        "vi": "Cacao latte kết hợp Oreo.",
+        "en": "Cacao latte with Oreo."
+      },
+      "description": {
+        "vi": "Cacao latte kết hợp Oreo.",
+        "en": "Cacao latte with Oreo."
+      },
+      "image": "/images/cacao.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ cacao oreo",
+        "en": "Illustration of oreo cacao"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "milk",
+          "label": {
+            "vi": "Lựa chọn sữa",
+            "en": "Milk choice"
+          },
+          "kind": "substitution",
+          "minSelections": 0,
+          "maxSelections": 1,
+          "choices": [
+            {
+              "id": "oat",
+              "label": {
+                "vi": "Sữa yến mạch",
+                "en": "Oat milk"
+              },
+              "priceDelta": 0,
+              "maxQuantity": 1
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": [
+            {
+              "id": "free-oat",
+              "kind": "substitution",
+              "label": {
+                "vi": "Đổi sữa yến mạch miễn phí",
+                "en": "Free oat milk swap"
+              },
+              "groupId": "milk",
+              "choiceIds": ["oat"],
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matcha-latte",
+      "categoryId": "matcha",
+      "name": {
+        "vi": "Matcha latte",
+        "en": "Matcha latte"
+      },
+      "summary": {
+        "vi": "Matcha với sữa tươi.",
+        "en": "Matcha with fresh milk."
+      },
+      "description": {
+        "vi": "Matcha với sữa tươi.",
+        "en": "Matcha with fresh milk."
+      },
+      "image": "/images/matcha.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ matcha latte",
+        "en": "Illustration of matcha latte"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "milk",
+          "label": {
+            "vi": "Lựa chọn sữa",
+            "en": "Milk choice"
+          },
+          "kind": "substitution",
+          "minSelections": 0,
+          "maxSelections": 1,
+          "choices": [
+            {
+              "id": "oat",
+              "label": {
+                "vi": "Sữa yến mạch",
+                "en": "Oat milk"
+              },
+              "priceDelta": 0,
+              "maxQuantity": 1
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": [
+            {
+              "id": "free-oat",
+              "kind": "substitution",
+              "label": {
+                "vi": "Đổi sữa yến mạch miễn phí",
+                "en": "Free oat milk swap"
+              },
+              "groupId": "milk",
+              "choiceIds": ["oat"],
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": "hot",
+          "label": {
+            "vi": "Nóng",
+            "en": "Hot"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "hot"
+          },
+          "benefits": [
+            {
+              "id": "free-oat",
+              "kind": "substitution",
+              "label": {
+                "vi": "Đổi sữa yến mạch miễn phí",
+                "en": "Free oat milk swap"
+              },
+              "groupId": "milk",
+              "choiceIds": ["oat"],
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matcha-coco",
+      "categoryId": "matcha",
+      "name": {
+        "vi": "Matcha coco",
+        "en": "Matcha coconut"
+      },
+      "summary": {
+        "vi": "Matcha với nước dừa.",
+        "en": "Matcha with coconut water."
+      },
+      "description": {
+        "vi": "Matcha với nước dừa.",
+        "en": "Matcha with coconut water."
+      },
+      "image": "/images/matcha.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ matcha coco",
+        "en": "Illustration of matcha coconut"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "cacao-sua",
+      "categoryId": "matcha",
+      "name": {
+        "vi": "Cacao sữa",
+        "en": "Cacao with fresh milk"
+      },
+      "summary": {
+        "vi": "Cacao với sữa tươi.",
+        "en": "Cacao with fresh milk."
+      },
+      "description": {
+        "vi": "Cacao với sữa tươi.",
+        "en": "Cacao with fresh milk."
+      },
+      "image": "/images/cacao.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ cacao sữa",
+        "en": "Illustration of cacao with fresh milk"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["ST1"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "milk",
+          "label": {
+            "vi": "Lựa chọn sữa",
+            "en": "Milk choice"
+          },
+          "kind": "substitution",
+          "minSelections": 0,
+          "maxSelections": 1,
+          "choices": [
+            {
+              "id": "oat",
+              "label": {
+                "vi": "Sữa yến mạch",
+                "en": "Oat milk"
+              },
+              "priceDelta": 0,
+              "maxQuantity": 1
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "cold",
+          "label": {
+            "vi": "Đá",
+            "en": "Iced"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "cold"
+          },
+          "benefits": [
+            {
+              "id": "free-oat",
+              "kind": "substitution",
+              "label": {
+                "vi": "Đổi sữa yến mạch miễn phí",
+                "en": "Free oat milk swap"
+              },
+              "groupId": "milk",
+              "choiceIds": ["oat"],
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": "hot",
+          "label": {
+            "vi": "Nóng",
+            "en": "Hot"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "temperature": "hot"
+          },
+          "benefits": [
+            {
+              "id": "free-oat",
+              "kind": "substitution",
+              "label": {
+                "vi": "Đổi sữa yến mạch miễn phí",
+                "en": "Free oat milk swap"
+              },
+              "groupId": "milk",
+              "choiceIds": ["oat"],
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tra-xoai",
+      "categoryId": "healthy",
+      "name": {
+        "vi": "Trà xoài",
+        "en": "Mango tea"
+      },
+      "summary": {
+        "vi": "Trà trái cây vị xoài.",
+        "en": "Mango fruit tea."
+      },
+      "description": {
+        "vi": "Trà trái cây vị xoài.",
+        "en": "Mango fruit tea."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà xoài",
+        "en": "Illustration of mango tea"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 70000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "tra-duong-nhan",
+      "categoryId": "healthy",
+      "name": {
+        "vi": "Bình trà dưỡng nhan",
+        "en": "Herbal chrysanthemum tea pot"
+      },
+      "summary": {
+        "vi": "Trà hoa cúc kết hợp thảo mộc.",
+        "en": "Chrysanthemum tea with mixed herbs."
+      },
+      "description": {
+        "vi": "Trà hoa cúc kết hợp thảo mộc.",
+        "en": "Chrysanthemum tea with mixed herbs."
+      },
+      "image": "/images/herbal-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ bình trà dưỡng nhan",
+        "en": "Illustration of herbal chrysanthemum tea pot"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "tra-chanh-atiso",
+      "categoryId": "healthy",
+      "name": {
+        "vi": "Trà chanh Atiso",
+        "en": "Atiso lemon tea"
+      },
+      "summary": {
+        "vi": "Trà atiso kết hợp chanh.",
+        "en": "Atiso tea with lemon."
+      },
+      "description": {
+        "vi": "Trà atiso kết hợp chanh.",
+        "en": "Atiso tea with lemon."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trà chanh atiso",
+        "en": "Illustration of Atiso lemon tea"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "free-toppings",
+          "label": {
+            "vi": "Topping miễn phí · Size M",
+            "en": "Complimentary toppings · Size M"
+          },
+          "kind": "included",
+          "variantIds": ["m"],
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "black-pearl",
+              "label": {
+                "vi": "Trân châu đen",
+                "en": "Black pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "grass-jelly",
+              "label": {
+                "vi": "Sương sáo",
+                "en": "Grass jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aloe",
+              "label": {
+                "vi": "Nha đam",
+                "en": "Aloe vera cubes"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "palm-seed",
+              "label": {
+                "vi": "Hạt đác",
+                "en": "Palm seeds"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "white-pearl",
+              "label": {
+                "vi": "Trân châu trắng",
+                "en": "White pearls"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "aiyu",
+              "label": {
+                "vi": "Thạch Aiyu",
+                "en": "Aiyu jelly"
+              },
+              "priceDelta": 0
+            },
+            {
+              "id": "coconut-jelly",
+              "label": {
+                "vi": "Thạch dừa",
+                "en": "Coconut jelly"
+              },
+              "priceDelta": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 65000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": [
+            {
+              "id": "free-topping",
+              "kind": "included-choice",
+              "label": {
+                "vi": "Tặng kèm topping tuỳ chọn",
+                "en": "Complimentary topping of your choice"
+              },
+              "groupId": "free-toppings",
+              "choiceIds": [
+                "black-pearl",
+                "grass-jelly",
+                "aloe",
+                "palm-seed",
+                "white-pearl",
+                "aiyu",
+                "coconut-jelly"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cam-ep",
+      "categoryId": "healthy",
+      "name": {
+        "vi": "Cam ép",
+        "en": "Orange juice"
+      },
+      "summary": {
+        "vi": "Nước cam ép.",
+        "en": "Orange juice."
+      },
+      "description": {
+        "vi": "Nước cam ép.",
+        "en": "Orange juice."
+      },
+      "image": "/images/orange-juice.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ cam ép",
+        "en": "Illustration of orange juice"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG2"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        },
+        {
+          "id": "m",
+          "label": {
+            "vi": "Size M",
+            "en": "Size M"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {
+            "size": "M"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "da-me",
+      "categoryId": "healthy",
+      "name": {
+        "vi": "Đá me đậu phộng",
+        "en": "Iced tamarind & peanut"
+      },
+      "summary": {
+        "vi": "Đá me với đậu phộng.",
+        "en": "Iced tamarind with peanuts."
+      },
+      "description": {
+        "vi": "Đá me với đậu phộng.",
+        "en": "Iced tamarind with peanuts."
+      },
+      "image": "/images/fruit-tea.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ đá me đậu phộng",
+        "en": "Illustration of iced tamarind & peanut"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": ["TG1"],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "s",
+          "label": {
+            "vi": "Size S",
+            "en": "Size S"
+          },
+          "price": 55000,
+          "availability": "available",
+          "attributes": {
+            "size": "S"
+          },
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "sausage",
+      "categoryId": "food",
+      "name": {
+        "vi": "Xúc xích Đức & khoai",
+        "en": "German sausage & potato wedges"
+      },
+      "summary": {
+        "vi": "Xúc xích Đức và khoai tây.",
+        "en": "German sausage with potato wedges."
+      },
+      "description": {
+        "vi": "Xúc xích Đức và khoai tây.",
+        "en": "German sausage with potato wedges."
+      },
+      "image": "/images/savory.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ xúc xích đức & khoai",
+        "en": "Illustration of german sausage & potato wedges"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "extras",
+          "label": {
+            "vi": "Thêm món",
+            "en": "Add-ons"
+          },
+          "kind": "add-on",
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "sausage",
+              "label": {
+                "vi": "Xúc xích · mỗi cây",
+                "en": "Sausage · each"
+              },
+              "priceDelta": 10000
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 60000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ],
+      "preparationMinutes": 15
+    },
+    {
+      "id": "croissant-floss",
+      "categoryId": "food",
+      "name": {
+        "vi": "Sừng trâu chà bông",
+        "en": "Chicken floss croissant"
+      },
+      "summary": {
+        "vi": "Bánh sừng trâu với chà bông gà.",
+        "en": "Croissant with chicken floss."
+      },
+      "description": {
+        "vi": "Bánh sừng trâu với chà bông gà.",
+        "en": "Croissant with chicken floss."
+      },
+      "image": "/images/croissant.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ sừng trâu chà bông",
+        "en": "Illustration of chicken floss croissant"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "croissant-almond",
+      "categoryId": "food",
+      "name": {
+        "vi": "Sừng trâu hạnh nhân",
+        "en": "Almond croissant"
+      },
+      "summary": {
+        "vi": "Bánh sừng trâu với hạnh nhân.",
+        "en": "Croissant with almonds."
+      },
+      "description": {
+        "vi": "Bánh sừng trâu với hạnh nhân.",
+        "en": "Croissant with almonds."
+      },
+      "image": "/images/croissant.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ sừng trâu hạnh nhân",
+        "en": "Illustration of almond croissant"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "croissant-milk",
+      "categoryId": "food",
+      "name": {
+        "vi": "Sừng trâu chấm sữa",
+        "en": "Croissant with sweet dipping sauce"
+      },
+      "summary": {
+        "vi": "Bánh sừng trâu ăn kèm sữa chấm.",
+        "en": "Croissant with sweet dipping sauce."
+      },
+      "description": {
+        "vi": "Bánh sừng trâu ăn kèm sữa chấm.",
+        "en": "Croissant with sweet dipping sauce."
+      },
+      "image": "/images/croissant.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ sừng trâu chấm sữa",
+        "en": "Illustration of croissant with sweet dipping sauce"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "cup-noodles",
+      "categoryId": "food",
+      "name": {
+        "vi": "Mì ly",
+        "en": "Cup noodles"
+      },
+      "summary": {
+        "vi": "Mì ly; có thể thêm xúc xích hoặc gà xé.",
+        "en": "Cup noodles; sausage and shredded chicken add-ons available."
+      },
+      "description": {
+        "vi": "Mì ly; có thể thêm xúc xích hoặc gà xé.",
+        "en": "Cup noodles; sausage and shredded chicken add-ons available."
+      },
+      "image": "/images/noodles.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ mì ly",
+        "en": "Illustration of cup noodles"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [
+        {
+          "id": "extras",
+          "label": {
+            "vi": "Thêm món",
+            "en": "Add-ons"
+          },
+          "kind": "add-on",
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "sausage",
+              "label": {
+                "vi": "Xúc xích · mỗi cây",
+                "en": "Sausage · each"
+              },
+              "priceDelta": 10000
+            },
+            {
+              "id": "chicken",
+              "label": {
+                "vi": "Gà xé · mỗi phần",
+                "en": "Shredded chicken · per portion"
+              },
+              "priceDelta": 10000
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 20000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "tiramisu",
+      "categoryId": "sweet",
+      "name": {
+        "vi": "Tiramisu",
+        "en": "Tiramisu"
+      },
+      "summary": {
+        "vi": "Bánh tiramisu kiểu Ý.",
+        "en": "Italian tiramisu."
+      },
+      "description": {
+        "vi": "Bánh tiramisu kiểu Ý.",
+        "en": "Italian tiramisu."
+      },
+      "image": "/images/tiramisu.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ tiramisu",
+        "en": "Illustration of tiramisu"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "cheesecake",
+      "categoryId": "sweet",
+      "name": {
+        "vi": "Bánh phô mai chanh dây",
+        "en": "Passion fruit cheesecake"
+      },
+      "summary": {
+        "vi": "Bánh phô mai vị chanh dây.",
+        "en": "Cheesecake with passion fruit."
+      },
+      "description": {
+        "vi": "Bánh phô mai vị chanh dây.",
+        "en": "Cheesecake with passion fruit."
+      },
+      "image": "/images/cheesecake.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ bánh phô mai chanh dây",
+        "en": "Illustration of passion fruit cheesecake"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "potato-wedges",
+      "categoryId": "sweet",
+      "name": {
+        "vi": "Khoai tây chiên không dầu",
+        "en": "Air-fried potato wedges"
+      },
+      "summary": {
+        "vi": "Khoai tây chiên bằng nồi chiên không dầu.",
+        "en": "Air-fried potato wedges."
+      },
+      "description": {
+        "vi": "Khoai tây chiên bằng nồi chiên không dầu.",
+        "en": "Air-fried potato wedges."
+      },
+      "image": "/images/potatoes.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ khoai tây chiên không dầu",
+        "en": "Illustration of air-fried potato wedges"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 40000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ],
+      "preparationMinutes": 15
+    },
+    {
+      "id": "croffle",
+      "categoryId": "sweet",
+      "name": {
+        "vi": "Croffle caramel",
+        "en": "Caramel croffle"
+      },
+      "summary": {
+        "vi": "Croffle với caramel.",
+        "en": "Croffle with caramel."
+      },
+      "description": {
+        "vi": "Croffle với caramel.",
+        "en": "Croffle with caramel."
+      },
+      "image": "/images/croffle.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ croffle caramel",
+        "en": "Illustration of caramel croffle"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 35000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ],
+      "preparationMinutes": 15
+    },
+    {
+      "id": "chicken-jerky",
+      "categoryId": "sweet",
+      "name": {
+        "vi": "Khô gà lá chanh",
+        "en": "Lime leaf chicken jerky"
+      },
+      "summary": {
+        "vi": "Khô gà với lá chanh.",
+        "en": "Chicken jerky with lime leaves."
+      },
+      "description": {
+        "vi": "Khô gà với lá chanh.",
+        "en": "Chicken jerky with lime leaves."
+      },
+      "image": "/images/jerky.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ khô gà lá chanh",
+        "en": "Illustration of lime leaf chicken jerky"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 35000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "black-pearl",
+      "categoryId": "toppings",
+      "name": {
+        "vi": "Trân châu đen",
+        "en": "Black pearls"
+      },
+      "summary": {
+        "vi": "Trân châu đen.",
+        "en": "Black pearls."
+      },
+      "description": {
+        "vi": "Trân châu đen.",
+        "en": "Black pearls."
+      },
+      "image": "/images/toppings.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trân châu đen",
+        "en": "Illustration of black pearls"
+      },
+      "badges": ["bestseller"],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 10000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "grass-jelly",
+      "categoryId": "toppings",
+      "name": {
+        "vi": "Sương sáo",
+        "en": "Grass jelly"
+      },
+      "summary": {
+        "vi": "Sương sáo.",
+        "en": "Grass jelly."
+      },
+      "description": {
+        "vi": "Sương sáo.",
+        "en": "Grass jelly."
+      },
+      "image": "/images/toppings.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ sương sáo",
+        "en": "Illustration of grass jelly"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 10000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "aloe",
+      "categoryId": "toppings",
+      "name": {
+        "vi": "Nha đam",
+        "en": "Aloe vera cubes"
+      },
+      "summary": {
+        "vi": "Nha đam.",
+        "en": "Aloe vera cubes."
+      },
+      "description": {
+        "vi": "Nha đam.",
+        "en": "Aloe vera cubes."
+      },
+      "image": "/images/toppings.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ nha đam",
+        "en": "Illustration of aloe vera cubes"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 10000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "palm-seed",
+      "categoryId": "toppings",
+      "name": {
+        "vi": "Hạt đác",
+        "en": "Palm seeds"
+      },
+      "summary": {
+        "vi": "Hạt đác.",
+        "en": "Palm seeds."
+      },
+      "description": {
+        "vi": "Hạt đác.",
+        "en": "Palm seeds."
+      },
+      "image": "/images/toppings.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ hạt đác",
+        "en": "Illustration of palm seeds"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 15000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "white-pearl",
+      "categoryId": "toppings",
+      "name": {
+        "vi": "Trân châu trắng",
+        "en": "White pearls"
+      },
+      "summary": {
+        "vi": "Trân châu trắng.",
+        "en": "White pearls."
+      },
+      "description": {
+        "vi": "Trân châu trắng.",
+        "en": "White pearls."
+      },
+      "image": "/images/toppings.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ trân châu trắng",
+        "en": "Illustration of white pearls"
+      },
+      "badges": ["must-try"],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 10000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "aiyu",
+      "categoryId": "toppings",
+      "name": {
+        "vi": "Thạch Aiyu",
+        "en": "Aiyu jelly"
+      },
+      "summary": {
+        "vi": "Thạch Aiyu.",
+        "en": "Aiyu jelly."
+      },
+      "description": {
+        "vi": "Thạch Aiyu.",
+        "en": "Aiyu jelly."
+      },
+      "image": "/images/toppings.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ thạch aiyu",
+        "en": "Illustration of aiyu jelly"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 10000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "coconut-jelly",
+      "categoryId": "toppings",
+      "name": {
+        "vi": "Thạch dừa",
+        "en": "Coconut jelly"
+      },
+      "summary": {
+        "vi": "Thạch dừa.",
+        "en": "Coconut jelly."
+      },
+      "description": {
+        "vi": "Thạch dừa.",
+        "en": "Coconut jelly."
+      },
+      "image": "/images/toppings.svg",
+      "imageAlt": {
+        "vi": "Minh hoạ thạch dừa",
+        "en": "Illustration of coconut jelly"
+      },
+      "badges": [],
+      "availability": "available",
+      "sourceCodes": [],
+      "aliases": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One serving"
+          },
+          "price": 10000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    }
+  ]
+}

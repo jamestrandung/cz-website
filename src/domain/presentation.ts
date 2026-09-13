@@ -1,0 +1,49 @@
+import type { Localized, Menu, Product } from './menu';
+
+export const text = (vi: string, en: string): Localized => ({ vi, en });
+export const isAvailable = (p: Product) =>
+  p.availability === 'available' && p.variants.some((v) => v.availability === 'available');
+export const formatPrice = (amount: number) => `${new Intl.NumberFormat('vi-VN').format(amount)}đ`;
+export function priceLabel(p: Product) {
+  // Variant order is editorial: the first is the catalog's starting option.
+  return formatPrice(p.variants[0].price);
+}
+
+const drinkCategories = new Set(['signature', 'coffee', 'tea', 'milk-tea', 'matcha', 'healthy']);
+export function categoryProducts(menu: Menu, categoryId: string): Product[] {
+  const products = menu.products.filter((p) => p.categoryId === categoryId);
+  // Sort by the visible price; retain editorial order for ties and non-drink groups.
+  return drinkCategories.has(categoryId)
+    ? products.sort((a, b) => b.variants[0].price - a.variants[0].price)
+    : products;
+}
+export function normalizeSearch(value: string) {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+export function searchProducts(menu: Menu, query: string): Product[] {
+  const q = normalizeSearch(query);
+  if (!q) return [];
+  const tokens = q.split(' ');
+  return menu.products
+    .map((p, index) => {
+      const name = normalizeSearch(`${p.name.vi} ${p.name.en} ${p.aliases.join(' ')}`);
+      const category = menu.categories.find((c) => c.id === p.categoryId)!;
+      const all = normalizeSearch(
+        `${name} ${p.summary.vi} ${p.summary.en} ${p.description.vi} ${p.description.en} ${category.name.vi} ${category.name.en}`,
+      );
+      return {
+        p,
+        index,
+        score: tokens.every((t) => all.includes(t)) ? (name.includes(q) ? 2 : 1) : 0,
+      };
+    })
+    .filter((r) => r.score > 0)
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .map((r) => r.p);
+}

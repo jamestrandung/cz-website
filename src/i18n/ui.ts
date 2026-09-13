@@ -1,0 +1,58 @@
+import { text as t } from '../domain/presentation';
+
+export const ui = {
+  headerTagline: t(
+    'CÀ PHÊ, MÓN NGON\n& NHỮNG KHOẢNG NGHỈ.',
+    'COFFEE, BITES\n& GOOD LITTLE BREAKS.',
+  ),
+  previewLabel: t('BẢN XEM THỬ', 'LOCAL PREVIEW'),
+  footerEyebrow: t('TỪ CÀ, VỚI CHÚT THƯƠNG.', 'FROM CÀ, WITH LOVE.'),
+  searchEyebrow: t('TÌM MỘT CHÚT NIỀM VUI.', 'FIND YOUR LITTLE JOY.'),
+  stampFirst: t('nhấp một ngụm', 'a little'),
+  stampSecond: t('vui một chút.', 'sip of joy.'),
+  menu: t('Thực đơn', 'Our menu'),
+  search: t('Tìm món', 'Search menu'),
+  searchPlaceholder: t('Hôm nay bạn muốn uống gì?', 'What are you in the mood for?'),
+  searchHint: t('Thử “matcha”, “cà phê” hoặc “trà”…', 'Try “matcha”, “coffee”, or “tea”…'),
+  searchEmpty: t('Chưa tìm thấy món này', 'No matches just yet'),
+  searchEmptyHint: t(
+    'Thử một từ khác nhé. Biết đâu lại gặp món mới!',
+    'Try another word. Your next favorite might be waiting.',
+  ),
+  results: t('món được tìm thấy', 'items found'),
+  clear: t('Xoá tìm kiếm', 'Clear search'),
+  close: t('Đóng', 'Close'),
+  back: t('Trở lại kết quả', 'Back to results'),
+  unavailable: t('Tạm hết', 'Unavailable'),
+  bestseller: t('Bán chạy', 'Best seller'),
+  'must-try': t('Nên thử', 'Must try'),
+  catalogTitle: t('Hôm nay, bạn chọn gì?', 'What sounds good today?'),
+  catalogNote: t('Món quen hay vị mới, đều có ở Cà.', 'Familiar favorites. Happy new discoveries.'),
+  catalogEyebrow: t('THỰC ĐƠN NHÀ CÀ', 'THE CÀ ZONE MENU'),
+  items: t('món', 'items'),
+  variants: t('Kích cỡ & lựa chọn', 'Sizes & varieties'),
+  extras: t('Thêm chút đúng gu', 'Make it your own'),
+  included: t('Đi kèm món', 'Included with your drink'),
+  complimentary: t('Miễn phí', 'Complimentary'),
+  min: t('phút chuẩn bị', 'min preparation'),
+  photoPending: t('Ảnh đang cập nhật', 'Photo coming soon'),
+  productPhotos: t('Ảnh món', 'Product photos'),
+  detailNote: t(
+    'Tuỳ chọn được hiển thị để tham khảo. Bạn có thể gọi món tại quầy.',
+    'Options are shown for reference. Order with our team at the counter.',
+  ),
+  footerTitle: t('Một chỗ quen. Một ngày vui.', 'Your familiar place. A brighter day.'),
+  footerDescription: t(
+    'Ghé ngồi một chút, hoặc mang một chút Cà về nhà.',
+    'Stay for a little while, or take a little Cà home.',
+  ),
+  linkPending: t('Sắp cập nhật', 'Coming soon'),
+  visit: t('Ghé Cà Zone', 'Visit Cà Zone'),
+  prototype: t('Bản xem trước · Giá theo menu.', 'Preview · Prices from the menu.'),
+  footerNote: t(
+    'Cà Zone · cà phê, món ngon & những khoảng nghỉ.',
+    'Cà Zone · coffee, bites & little breaks.',
+  ),
+  top: t('Về đầu trang', 'Back to top'),
+};
+export type UiKey = keyof typeof ui;

@@ -1,0 +1,59 @@
+---
+import type { Product } from '../domain/menu';
+import { priceLabel, isAvailable } from '../domain/menu';
+import { ui } from '../i18n/ui';
+import Localized from './Localized.astro';
+import Icon from './Icon.astro';
+import { badgeIcon } from './badgeIcon';
+import { thumbnailSet } from '../domain/images';
+interface Props {
+  product: Product;
+}
+const { product: p } = Astro.props;
+---
+
+<button
+  class:list={['product-row', { 'is-unavailable': !isAvailable(p) }]}
+  type="button"
+  data-product={p.id}
+  aria-haspopup="dialog"
+>
+  <span class="product-image">
+    <img
+      src={p.image}
+      srcset={thumbnailSet(p)}
+      sizes="(max-width: 360px) 73px, (max-width: 700px) 86px, 102px"
+      alt=""
+      width="240"
+      height="240"
+      loading="lazy"
+      decoding="async"
+    />
+  </span>
+  <span class="product-copy">
+    <span class="product-name">
+      <Localized value={p.name} />
+    </span>
+    <span class="product-summary">
+      <Localized value={p.summary} />
+    </span>
+    <span class="product-meta">
+      <span class="price">{priceLabel(p)}</span>
+      {!isAvailable(p) ? (
+        <span class="status">
+          <Localized value={ui.unavailable} />
+        </span>
+      ) : (
+        p.badges[0] && (
+          <span class:list={['badge', p.badges[0]]}>
+            <Fragment set:html={badgeIcon(p.badges[0])} />
+            <Localized value={ui[p.badges[0]]} />
+          </span>
+        )
+      )}
+    </span>
+  </span>
+  <span class="product-open">
+    <Icon name="arrow" size={18} />
+  </span>
+</button>

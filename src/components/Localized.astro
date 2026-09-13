@@ -1,0 +1,12 @@
+---
+import type { Localized } from '../domain/menu';
+interface Props {
+  value: Localized;
+  class?: string;
+}
+const { value, class: className } = Astro.props;
+---
+
+<span class={className} data-vi={value.vi} data-en={value.en}>
+  {value.vi}
+</span>

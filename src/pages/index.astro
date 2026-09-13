@@ -1,0 +1,332 @@
+---
+import { discovery, externalActions, locations } from '../data/menu';
+import { loadMenu } from '../content/loadMenu';
+import { categoryProducts } from '../domain/presentation';
+import { thumbnailSet } from '../domain/images';
+import { ui } from '../i18n/ui';
+import Localized from '../components/Localized.astro';
+import Icon from '../components/Icon.astro';
+import ProductRow from '../components/ProductRow.astro';
+import '../styles/global.css';
+const menu = loadMenu();
+const featured = discovery.featuredProductIds.map((id) => menu.products.find((p) => p.id === id)!);
+if (!menu.categories.some((c) => c.id === discovery.targetCategory) || featured.some((p) => !p))
+  throw new Error('Invalid Discovery reference');
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffbc00" />
+    <meta name="description" content="Khám phá cà phê, trà và món ngon tại Cà Zone." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Cà Zone — Thực đơn</title>
+    <script is:inline>
+      try {
+        document.documentElement.lang =
+          localStorage.getItem('cazone-locale') === 'en' ? 'en' : 'vi';
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">
+      <Localized value={ui.menu} />
+    </a>
+    <header class="site-header shell" id="top">
+      <a class="logo" href="#top" aria-label="Cà Zone">
+        <img
+          src="/images/logo.png"
+          alt="Cà Zone — caffè & bites"
+          width="1000"
+          height="1000"
+          fetchpriority="high"
+        />
+      </a>
+      <div class="header-note">
+        <Localized value={ui.headerTagline} />
+      </div>
+      <div class="header-controls">
+        <span class="local-preview">
+          <Localized value={ui.previewLabel} />
+        </span>
+        <div class="language-switch" role="group" aria-label="Language / Ngôn ngữ">
+          <button type="button" data-locale="vi" aria-pressed="true">
+            VI
+          </button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-locale="en" aria-pressed="false">
+            EN
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      {discovery.enabled && (
+        <section class="discovery shell" aria-label="Cà Zone">
+          <div class="discovery-content">
+            <p class="eyebrow">
+              <span class="tiny-spark" aria-hidden="true">
+                ✳
+              </span>
+              <Localized value={discovery.eyebrow} />
+            </p>
+            <h1>
+              <Localized value={discovery.title} />
+            </h1>
+            <p class="discovery-description">
+              <Localized value={discovery.description} />
+            </p>
+            <a class="hero-action" href={`#${discovery.targetCategory}`}>
+              <Localized value={discovery.action} />
+              <Icon name="arrow" />
+            </a>
+          </div>
+          <div class="hero-art">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="hero-stamp" aria-hidden="true">
+              <Localized value={ui.stampFirst} />
+              <strong>
+                <Localized value={ui.stampSecond} />
+              </strong>
+              <span>✳</span>
+            </div>
+            {featured.map((p, index) => (
+              <button
+                class:list={['hero-product', index === 0 ? 'hero-coffee' : 'hero-matcha']}
+                data-product={p.id}
+                type="button"
+                aria-haspopup="dialog"
+                data-label-vi={p.name.vi}
+                data-label-en={p.name.en}
+                aria-label={p.name.vi}
+              >
+                <img
+                  src={p.image}
+                  srcset={thumbnailSet(p)}
+                  sizes="(max-width: 700px) 160px, 240px"
+                  alt=""
+                  width="480"
+                  height="480"
+                />
+                <span>
+                  <Localized value={p.name} />
+                  <Icon name="arrow" size={15} />
+                </span>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <nav class="category-nav" aria-label="Menu categories / Danh mục">
+        <div class="nav-inner shell">
+          <div class="category-track">
+            {menu.categories.map((c, i) => (
+              <a
+                class:list={['category-link', { active: i === 0 }]}
+                href={`#${c.id}`}
+                data-category={c.id}
+                aria-current={i === 0 ? 'true' : undefined}
+              >
+                <Localized value={c.name} />
+              </a>
+            ))}
+          </div>
+          <button
+            class="search-trigger"
+            type="button"
+            data-search
+            data-label-vi={ui.search.vi}
+            data-label-en={ui.search.en}
+            aria-label={ui.search.vi}
+            aria-haspopup="dialog"
+          >
+            <Icon name="search" />
+            <span>
+              <Localized value={ui.search} />
+            </span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="catalog shell" id="catalog">
+        <div class="catalog-intro">
+          <div>
+            <p class="eyebrow">
+              <Localized value={ui.catalogEyebrow} />
+            </p>
+            <h2>
+              <Localized value={ui.catalogTitle} />
+            </h2>
+            <p>
+              <Localized value={ui.catalogNote} />
+            </p>
+          </div>
+          <span class="catalog-count">
+            {menu.products.length.toString().padStart(2, '0')} <Localized value={ui.items} />
+            <span aria-hidden="true"> ↙</span>
+          </span>
+        </div>
+        {menu.categories.map((category, index) => (
+          <section
+            class:list={['category-section', { 'signature-section': category.id === 'signature' }]}
+            id={category.id}
+            data-section
+          >
+            <div class="category-heading">
+              <span class="section-number">{(index + 1).toString().padStart(2, '0')} /</span>
+              <h3>
+                <Localized value={category.name} />
+              </h3>
+              <p>
+                <Localized value={category.subtitle} />
+              </p>
+              <span class="section-spark" aria-hidden="true">
+                ✳
+              </span>
+            </div>
+            <div class="product-list">
+              {categoryProducts(menu, category.id).map((product) => (
+                <ProductRow product={product} />
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+      <section class="external-section">
+        <div class="shell">
+          <p class="eyebrow">
+            <Localized value={ui.footerEyebrow} />
+          </p>
+          <div class="footer-heading">
+            <h2>
+              <Localized value={ui.footerTitle} />
+            </h2>
+            <p>
+              <Localized value={ui.footerDescription} />
+            </p>
+          </div>
+          <div class="external-actions">
+            {externalActions.map((action) =>
+              action.url ? (
+                <a
+                  class="external-action"
+                  href={action.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <strong>
+                    <Localized value={action.label} />
+                  </strong>
+                  <span>
+                    <Localized value={action.detail} />
+                  </span>
+                  <Icon name="arrow" />
+                </a>
+              ) : (
+                <div class="external-action pending">
+                  <strong>
+                    <Localized value={action.label} />
+                  </strong>
+                  <span>
+                    <Localized value={ui.linkPending} />
+                  </span>
+                  <Icon name={action.id === 'maps' ? 'pin' : 'arrow'} />
+                </div>
+              ),
+            )}
+            <div class="external-action location-card">
+              <strong>
+                <Localized value={ui.visit} />
+              </strong>
+              <Icon name="pin" />
+              <div class="location-links">
+                {locations.map((location) => (
+                  <a href={location.url} target="_blank" rel="noopener noreferrer">
+                    <Localized value={location.name} />
+                    <Icon name="arrow" size={14} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer shell">
+      <p>
+        <Localized value={ui.footerNote} />
+      </p>
+      <a href="#top">
+        <Localized value={ui.top} />
+        <Icon name="up" size={16} />
+      </a>
+    </footer>
+    <p class="prototype-note">
+      <span aria-hidden="true">◌</span> <Localized value={ui.prototype} />
+    </p>
+
+    <dialog id="menu-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-toolbar">
+        <button class="icon-button dialog-back" type="button" hidden aria-label={ui.back.vi}>
+          <Icon name="arrow" />
+        </button>
+        <span class="dialog-wordmark">cà zone</span>
+        <div class="language-switch dialog-languages" role="group" aria-label="Language / Ngôn ngữ">
+          <button type="button" data-locale="vi" aria-pressed="true">
+            VI
+          </button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-locale="en" aria-pressed="false">
+            EN
+          </button>
+        </div>
+        <button class="icon-button dialog-close" type="button" aria-label={ui.close.vi}>
+          <Icon name="close" />
+        </button>
+      </div>
+      <div class="dialog-scroll">
+        <section id="search-panel" hidden>
+          <div class="search-heading">
+            <p class="eyebrow">
+              <Localized value={ui.searchEyebrow} />
+            </p>
+            <h2 id="search-title">
+              <Localized value={ui.search} />
+            </h2>
+          </div>
+          <form class="search-form" role="search">
+            <Icon name="search" />
+            <input
+              id="search-input"
+              type="search"
+              autocomplete="off"
+              enterkeyhint="search"
+              aria-label={ui.search.vi}
+              placeholder={ui.searchPlaceholder.vi}
+            />
+            <button class="icon-button search-clear" type="button" aria-label={ui.clear.vi}>
+              <Icon name="close" size={18} />
+            </button>
+          </form>
+          <p class="search-feedback" aria-live="polite" role="status"></p>
+          <div id="search-results"></div>
+        </section>
+        <section id="detail-panel" hidden></section>
+      </div>
+    </dialog>
+    <script
+      is:inline
+      id="menu-data"
+      type="application/json"
+      set:html={JSON.stringify(menu).replace(/</g, '\\u003c')}
+    ></script>
+    <script>
+      import '../scripts/menu';
+    </script>
+  </body>
+</html>

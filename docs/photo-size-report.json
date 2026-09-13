@@ -1,0 +1,28 @@
+{
+  "products": 26,
+  "photos": 28,
+  "sourceBytes": 92406420,
+  "outputBytes": 3815996,
+  "widths": {
+    "240": {
+      "minBytes": 4656,
+      "maxBytes": 8292,
+      "totalBytes": 171788
+    },
+    "480": {
+      "minBytes": 13350,
+      "maxBytes": 24298,
+      "totalBytes": 484546
+    },
+    "800": {
+      "minBytes": 28598,
+      "maxBytes": 54448,
+      "totalBytes": 1072970
+    },
+    "1200": {
+      "minBytes": 55510,
+      "maxBytes": 109718,
+      "totalBytes": 2086692
+    }
+  }
+}

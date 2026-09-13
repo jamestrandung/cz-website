@@ -1,0 +1,438 @@
+{
+  "bac-xiu": [
+    {
+      "sources": {
+        "240": "/images/products/bac-xiu-0-240-429669f59a.webp",
+        "480": "/images/products/bac-xiu-0-480-e15aaf4f04.webp",
+        "800": "/images/products/bac-xiu-0-800-0f129fce13.webp",
+        "1200": "/images/products/bac-xiu-0-1200-3b63f108f8.webp"
+      },
+      "alt": {
+        "vi": "Bạc xỉu",
+        "en": "White coffee"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "phin-cam": [
+    {
+      "sources": {
+        "240": "/images/products/phin-cam-0-240-4545e5951f.webp",
+        "480": "/images/products/phin-cam-0-480-091b1a214a.webp",
+        "800": "/images/products/phin-cam-0-800-e117d5219b.webp",
+        "1200": "/images/products/phin-cam-0-1200-477f6edaf4.webp"
+      },
+      "alt": {
+        "vi": "Phin cam",
+        "en": "Orange coffee"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "phin-sua": [
+    {
+      "sources": {
+        "240": "/images/products/phin-sua-0-240-e710f926db.webp",
+        "480": "/images/products/phin-sua-0-480-69d32f42a8.webp",
+        "800": "/images/products/phin-sua-0-800-5cf49f6eb9.webp",
+        "1200": "/images/products/phin-sua-0-1200-9e26fc9295.webp"
+      },
+      "alt": {
+        "vi": "Phin sữa",
+        "en": "Brown coffee"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "phin-den": [
+    {
+      "sources": {
+        "240": "/images/products/phin-den-0-240-49f7ff9734.webp",
+        "480": "/images/products/phin-den-0-480-aded38ab07.webp",
+        "800": "/images/products/phin-den-0-800-6a9c346fad.webp",
+        "1200": "/images/products/phin-den-0-1200-4771f2ae30.webp"
+      },
+      "alt": {
+        "vi": "Phin đen",
+        "en": "Black coffee"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "phin-cano": [
+    {
+      "sources": {
+        "240": "/images/products/phin-cano-0-240-01b0889408.webp",
+        "480": "/images/products/phin-cano-0-480-2b8ddcfa30.webp",
+        "800": "/images/products/phin-cano-0-800-966ec12a88.webp",
+        "1200": "/images/products/phin-cano-0-1200-cfd1ea03e5.webp"
+      },
+      "alt": {
+        "vi": "Phin cano",
+        "en": "Viet Americano"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "cacao-muoi": [
+    {
+      "sources": {
+        "240": "/images/products/cacao-muoi-0-240-87b688c060.webp",
+        "480": "/images/products/cacao-muoi-0-480-05db6f80ea.webp",
+        "800": "/images/products/cacao-muoi-0-800-0b334fb889.webp",
+        "1200": "/images/products/cacao-muoi-0-1200-7be1d457d6.webp"
+      },
+      "alt": {
+        "vi": "Cacao muối Huế",
+        "en": "Huế salted cacao"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "ca-phe-muoi": [
+    {
+      "sources": {
+        "240": "/images/products/ca-phe-muoi-0-240-4dc87ed2d4.webp",
+        "480": "/images/products/ca-phe-muoi-0-480-5cb3e2f13e.webp",
+        "800": "/images/products/ca-phe-muoi-0-800-05831dae56.webp",
+        "1200": "/images/products/ca-phe-muoi-0-1200-7bfc5fd216.webp"
+      },
+      "alt": {
+        "vi": "Cà phê muối Huế",
+        "en": "Huế salted coffee"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "tra-buoi": [
+    {
+      "sources": {
+        "240": "/images/products/tra-buoi-0-240-f806373fcb.webp",
+        "480": "/images/products/tra-buoi-0-480-141c522ebf.webp",
+        "800": "/images/products/tra-buoi-0-800-25f9acf83d.webp",
+        "1200": "/images/products/tra-buoi-0-1200-cf2f8eac85.webp"
+      },
+      "alt": {
+        "vi": "Trà bưởi Aiyu",
+        "en": "Pomelo Aiyu tea"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "tra-chanh-day": [
+    {
+      "sources": {
+        "240": "/images/products/tra-chanh-day-0-240-67e0ec0f37.webp",
+        "480": "/images/products/tra-chanh-day-0-480-41f10e01d8.webp",
+        "800": "/images/products/tra-chanh-day-0-800-3fd296a046.webp",
+        "1200": "/images/products/tra-chanh-day-0-1200-87a1016a27.webp"
+      },
+      "alt": {
+        "vi": "Trà chanh dây tắc xí muội",
+        "en": "Passion fruit, calamansi & plum tea"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "thanh-tra-mat-ong": [
+    {
+      "sources": {
+        "240": "/images/products/thanh-tra-mat-ong-0-240-24c4bd4b9e.webp",
+        "480": "/images/products/thanh-tra-mat-ong-0-480-abf01558f4.webp",
+        "800": "/images/products/thanh-tra-mat-ong-0-800-ad6e8a2772.webp",
+        "1200": "/images/products/thanh-tra-mat-ong-0-1200-da9131976e.webp"
+      },
+      "alt": {
+        "vi": "Thanh trà mật ong hạt đác",
+        "en": "Honey & palm seed chrysanthemum tea"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "tra-sua-hanh-nhan": [
+    {
+      "sources": {
+        "240": "/images/products/tra-sua-hanh-nhan-0-240-63fab9185b.webp",
+        "480": "/images/products/tra-sua-hanh-nhan-0-480-41c1ed730b.webp",
+        "800": "/images/products/tra-sua-hanh-nhan-0-800-11a7e6c7e9.webp",
+        "1200": "/images/products/tra-sua-hanh-nhan-0-1200-ccdbb0c67a.webp"
+      },
+      "alt": {
+        "vi": "Trà sữa milkfoam hạnh nhân nướng",
+        "en": "Almond milk foam oolong milk tea"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "tra-sua-olong": [
+    {
+      "sources": {
+        "240": "/images/products/tra-sua-olong-0-240-d9b16a646c.webp",
+        "480": "/images/products/tra-sua-olong-0-480-d3c8d7f8e5.webp",
+        "800": "/images/products/tra-sua-olong-0-800-09f3e03e65.webp",
+        "1200": "/images/products/tra-sua-olong-0-1200-b8dd2523bf.webp"
+      },
+      "alt": {
+        "vi": "Trà sữa ô long",
+        "en": "Oolong milk tea"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "tra-nhai-macchiato": [
+    {
+      "sources": {
+        "240": "/images/products/tra-nhai-macchiato-0-240-acf7569fab.webp",
+        "480": "/images/products/tra-nhai-macchiato-0-480-9209164143.webp",
+        "800": "/images/products/tra-nhai-macchiato-0-800-99f15eef52.webp",
+        "1200": "/images/products/tra-nhai-macchiato-0-1200-970dec7519.webp"
+      },
+      "alt": {
+        "vi": "Trà nhài macchiato",
+        "en": "Jasmine tea with milk foam"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "matcha-latte": [
+    {
+      "sources": {
+        "240": "/images/products/matcha-latte-0-240-52fd864245.webp",
+        "480": "/images/products/matcha-latte-0-480-7c2fe1e6bc.webp",
+        "800": "/images/products/matcha-latte-0-800-e57e6034c9.webp",
+        "1200": "/images/products/matcha-latte-0-1200-f407981596.webp"
+      },
+      "alt": {
+        "vi": "Matcha latte · Đá",
+        "en": "Matcha latte · Iced"
+      },
+      "label": {
+        "vi": "Đá",
+        "en": "Iced"
+      },
+      "variantIds": ["cold"],
+      "focalPoint": "50% 50%"
+    },
+    {
+      "sources": {
+        "240": "/images/products/matcha-latte-1-240-c08919ff96.webp",
+        "480": "/images/products/matcha-latte-1-480-f00036e13d.webp",
+        "800": "/images/products/matcha-latte-1-800-8edf58109d.webp",
+        "1200": "/images/products/matcha-latte-1-1200-09e0001ea3.webp"
+      },
+      "alt": {
+        "vi": "Matcha latte · Nóng",
+        "en": "Matcha latte · Hot"
+      },
+      "label": {
+        "vi": "Nóng",
+        "en": "Hot"
+      },
+      "variantIds": ["hot"],
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "cacao-sua": [
+    {
+      "sources": {
+        "240": "/images/products/cacao-sua-0-240-f512da7e78.webp",
+        "480": "/images/products/cacao-sua-0-480-cad93e0645.webp",
+        "800": "/images/products/cacao-sua-0-800-48206bc2dc.webp",
+        "1200": "/images/products/cacao-sua-0-1200-84bb4075f7.webp"
+      },
+      "alt": {
+        "vi": "Cacao sữa · Đá",
+        "en": "Cacao with fresh milk · Iced"
+      },
+      "label": {
+        "vi": "Đá",
+        "en": "Iced"
+      },
+      "variantIds": ["cold"],
+      "focalPoint": "50% 50%"
+    },
+    {
+      "sources": {
+        "240": "/images/products/cacao-sua-1-240-8dcd877b40.webp",
+        "480": "/images/products/cacao-sua-1-480-dd93bd2c99.webp",
+        "800": "/images/products/cacao-sua-1-800-9771c23181.webp",
+        "1200": "/images/products/cacao-sua-1-1200-17fd73b617.webp"
+      },
+      "alt": {
+        "vi": "Cacao sữa · Nóng",
+        "en": "Cacao with fresh milk · Hot"
+      },
+      "label": {
+        "vi": "Nóng",
+        "en": "Hot"
+      },
+      "variantIds": ["hot"],
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "tra-duong-nhan": [
+    {
+      "sources": {
+        "240": "/images/products/tra-duong-nhan-0-240-ba5fb77d9b.webp",
+        "480": "/images/products/tra-duong-nhan-0-480-7a39ad65eb.webp",
+        "800": "/images/products/tra-duong-nhan-0-800-57f2e0a49a.webp",
+        "1200": "/images/products/tra-duong-nhan-0-1200-5df3dc0846.webp"
+      },
+      "alt": {
+        "vi": "Bình trà dưỡng nhan",
+        "en": "Herbal chrysanthemum tea pot"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "cam-ep": [
+    {
+      "sources": {
+        "240": "/images/products/cam-ep-0-240-b9f0a9e13e.webp",
+        "480": "/images/products/cam-ep-0-480-f755008047.webp",
+        "800": "/images/products/cam-ep-0-800-cda48a2cfd.webp",
+        "1200": "/images/products/cam-ep-0-1200-ab4f34b67a.webp"
+      },
+      "alt": {
+        "vi": "Cam ép",
+        "en": "Orange juice"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "da-me": [
+    {
+      "sources": {
+        "240": "/images/products/da-me-0-240-0b7fbc3b9d.webp",
+        "480": "/images/products/da-me-0-480-acf21de6a8.webp",
+        "800": "/images/products/da-me-0-800-b3658aaa94.webp",
+        "1200": "/images/products/da-me-0-1200-77f674855b.webp"
+      },
+      "alt": {
+        "vi": "Đá me đậu phộng",
+        "en": "Iced tamarind & peanut"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "sausage": [
+    {
+      "sources": {
+        "240": "/images/products/sausage-0-240-20214c475e.webp",
+        "480": "/images/products/sausage-0-480-0aa98c001d.webp",
+        "800": "/images/products/sausage-0-800-985f790e0d.webp",
+        "1200": "/images/products/sausage-0-1200-d9534aae7f.webp"
+      },
+      "alt": {
+        "vi": "Xúc xích Đức & khoai",
+        "en": "German sausage & potato wedges"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "croissant-floss": [
+    {
+      "sources": {
+        "240": "/images/products/croissant-floss-0-240-36e469c0ee.webp",
+        "480": "/images/products/croissant-floss-0-480-d0e96955f2.webp",
+        "800": "/images/products/croissant-floss-0-800-a4fbfebf3b.webp",
+        "1200": "/images/products/croissant-floss-0-1200-28ccae6cc5.webp"
+      },
+      "alt": {
+        "vi": "Sừng trâu chà bông",
+        "en": "Chicken floss croissant"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "croissant-almond": [
+    {
+      "sources": {
+        "240": "/images/products/croissant-almond-0-240-7a27adb482.webp",
+        "480": "/images/products/croissant-almond-0-480-9f9d4c509e.webp",
+        "800": "/images/products/croissant-almond-0-800-ac07a6af54.webp",
+        "1200": "/images/products/croissant-almond-0-1200-9561a9eed7.webp"
+      },
+      "alt": {
+        "vi": "Sừng trâu hạnh nhân",
+        "en": "Almond croissant"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "croissant-milk": [
+    {
+      "sources": {
+        "240": "/images/products/croissant-milk-0-240-292cc37072.webp",
+        "480": "/images/products/croissant-milk-0-480-64528be08a.webp",
+        "800": "/images/products/croissant-milk-0-800-f66936cefe.webp",
+        "1200": "/images/products/croissant-milk-0-1200-97413433ee.webp"
+      },
+      "alt": {
+        "vi": "Sừng trâu chấm sữa",
+        "en": "Croissant with sweet dipping sauce"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "cup-noodles": [
+    {
+      "sources": {
+        "240": "/images/products/cup-noodles-0-240-47758a45ab.webp",
+        "480": "/images/products/cup-noodles-0-480-4e4794bc7a.webp",
+        "800": "/images/products/cup-noodles-0-800-97f4d9bea0.webp",
+        "1200": "/images/products/cup-noodles-0-1200-addd9ba4e8.webp"
+      },
+      "alt": {
+        "vi": "Mì ly",
+        "en": "Cup noodles"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "potato-wedges": [
+    {
+      "sources": {
+        "240": "/images/products/potato-wedges-0-240-d6d0fec051.webp",
+        "480": "/images/products/potato-wedges-0-480-9db9700549.webp",
+        "800": "/images/products/potato-wedges-0-800-d8922e3e92.webp",
+        "1200": "/images/products/potato-wedges-0-1200-92198ee195.webp"
+      },
+      "alt": {
+        "vi": "Khoai tây chiên không dầu",
+        "en": "Air-fried potato wedges"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "croffle": [
+    {
+      "sources": {
+        "240": "/images/products/croffle-0-240-f5acae4c38.webp",
+        "480": "/images/products/croffle-0-480-c45eaa4259.webp",
+        "800": "/images/products/croffle-0-800-4ef13cbeba.webp",
+        "1200": "/images/products/croffle-0-1200-1692c74f01.webp"
+      },
+      "alt": {
+        "vi": "Croffle caramel",
+        "en": "Caramel croffle"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "chicken-jerky": [
+    {
+      "sources": {
+        "240": "/images/products/chicken-jerky-0-240-125b252071.webp",
+        "480": "/images/products/chicken-jerky-0-480-704c7cd520.webp",
+        "800": "/images/products/chicken-jerky-0-800-eb55e47514.webp",
+        "1200": "/images/products/chicken-jerky-0-1200-ee7cf034e6.webp"
+      },
+      "alt": {
+        "vi": "Khô gà lá chanh",
+        "en": "Lime leaf chicken jerky"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ]
+}
