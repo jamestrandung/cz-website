@@ -2630,8 +2630,8 @@
             {
               "id": "sausage",
               "label": {
-                "vi": "Xúc xích · mỗi cây",
-                "en": "Sausage · each"
+                "vi": "Xúc xích",
+                "en": "Sausage"
               },
               "priceDelta": 10000
             }
@@ -2807,8 +2807,8 @@
             {
               "id": "sausage",
               "label": {
-                "vi": "Xúc xích · mỗi cây",
-                "en": "Sausage · each"
+                "vi": "Xúc xích",
+                "en": "Sausage"
               },
               "priceDelta": 10000
             }
@@ -2866,16 +2866,16 @@
             {
               "id": "sausage",
               "label": {
-                "vi": "Xúc xích · mỗi cây",
-                "en": "Sausage · each"
+                "vi": "Xúc xích",
+                "en": "Sausage"
               },
               "priceDelta": 10000
             },
             {
               "id": "chicken",
               "label": {
-                "vi": "Gà xé · mỗi phần",
-                "en": "Shredded chicken · per portion"
+                "vi": "Gà xé",
+                "en": "Shredded chicken"
               },
               "priceDelta": 10000
             }

@@ -55,7 +55,7 @@ Keep stable product/variant IDs when possible. Check combo references, option/be
 
 ## UI and photo conventions
 
-Preserve the approved mobile-first brand styling and locally hosted Vietnamese-capable font. Keep VI/EN copy and accessibility labels in sync. Discovery and the combo slider are independent sections. Reuse the shared eligibility resolver for catalog badges, search, product links and combo details.
+Preserve the approved mobile-first brand styling and locally hosted Vietnamese-capable font. Keep VI/EN copy and accessibility labels in sync: when a `"vi"`/`"en"` label pair changes (e.g. in `src/data/products.json` or `src/data/combos.ts`), update both languages together even if the request only names one — re-check the other language's field in the same object for equivalent wording before moving on. Discovery and the combo slider are independent sections. Reuse the shared eligibility resolver for catalog badges, search, product links and combo details.
 
 Maintain the native dialog's Back/Escape behavior, focus restoration, catalog scroll position, language switching and small-screen layout. A product click currently opens details; it does not select an order. Unavailable products remain inspectable.
 

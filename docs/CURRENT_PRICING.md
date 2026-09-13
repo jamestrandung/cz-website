@@ -191,19 +191,19 @@ Choices are scoped to their option group. A choice ID that resembles a product I
 
 | Group | Kind | Applicable variant IDs | Min/max selections | Choice ID: label = adjustment; max quantity |
 | --- | --- | --- | --- | --- |
-| extras | add-on | All | 0 / unspecified | sausage: Xúc xích · mỗi cây = +10.000đ; max unspecified |
+| extras | add-on | All | 0 / unspecified | sausage: Xúc xích = +10.000đ; max unspecified |
 
 ### Ốp la bơ tỏi (garlic-eggs)
 
 | Group | Kind | Applicable variant IDs | Min/max selections | Choice ID: label = adjustment; max quantity |
 | --- | --- | --- | --- | --- |
-| extras | add-on | All | 0 / unspecified | sausage: Xúc xích · mỗi cây = +10.000đ; max unspecified |
+| extras | add-on | All | 0 / unspecified | sausage: Xúc xích = +10.000đ; max unspecified |
 
 ### Mì ly (cup-noodles)
 
 | Group | Kind | Applicable variant IDs | Min/max selections | Choice ID: label = adjustment; max quantity |
 | --- | --- | --- | --- | --- |
-| extras | add-on | All | 0 / unspecified | sausage: Xúc xích · mỗi cây = +10.000đ; max unspecified; chicken: Gà xé · mỗi phần = +10.000đ; max unspecified |
+| extras | add-on | All | 0 / unspecified | sausage: Xúc xích = +10.000đ; max unspecified; chicken: Gà xé = +10.000đ; max unspecified |
 
 ## Variant benefits
 
