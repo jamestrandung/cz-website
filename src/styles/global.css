@@ -4,9 +4,10 @@
 @import '@fontsource/be-vietnam-pro/700.css';
 @import '@fontsource/be-vietnam-pro/800.css';
 
+/* Brand colors — see docs/ARCHITECTURE.md#brand-colors. Do not tweak without updating both. */
 :root {
   --yellow: #ffbc00;
-  --ink: #1c1c23;
+  --ink: #1c1b24;
   --cream: #fcf8e9;
   --paper: #fffdf7;
   --muted: #706e65;

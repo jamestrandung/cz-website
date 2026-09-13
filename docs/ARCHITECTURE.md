@@ -140,7 +140,16 @@ The slider uses native horizontal scrolling and CSS snap, with arrow controls an
 
 ## Images and brand assets
 
-Brand colors are yellow, charcoal and cream; Be Vietnam Pro is hosted locally for Vietnamese glyph support. Product photos come from the owner's allowlisted source images. Missing photos use category placeholders rather than invented product images.
+### Brand colors
+
+Full brand doc is WIP; these are the authoritative values until it lands. Update `src/styles/global.css` (`--yellow`, `--ink`) in the same change as any value here — don't let them drift apart.
+
+| Role | Hex | RGB | CMYK |
+| --- | --- | --- | --- |
+| Primary (yellow) | `#ffbc00` | 255, 191, 0 | 0, 29, 100, 0 |
+| Secondary (charcoal) | `#1c1b24` | 28, 27, 36 | 77, 72, 58, 73 |
+
+Be Vietnam Pro is hosted locally for Vietnamese glyph support. Product photos come from the owner's allowlisted source images. Missing photos use category placeholders rather than invented product images.
 
 The image pipeline writes content-hashed WebP assets at 240/480/800/1200 pixels, updates `src/data/photo-assets.json`, and preserves originals. It matches macOS Unicode-normalized filenames and removes stale script-generated assets. Catalog, search, Discovery and combo cards use thumbnails; detail-sized assets are requested when opening a product. Current coverage: 28 products, 30 views, 120 responsive files.
 
