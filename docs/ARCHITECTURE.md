@@ -149,6 +149,10 @@ Full brand doc is WIP; these are the authoritative values until it lands. Update
 | Primary (yellow) | `#ffbc00` | 255, 191, 0 | 0, 29, 100, 0 |
 | Secondary (charcoal) | `#1c1b24` | 28, 27, 36 | 77, 72, 58, 73 |
 
+### Logo
+
+`public/images/logo.png` is the horizontal "cà zone" lockup (yellow badge, page 29 of the brand Canva design `DAFHyyOt8ds`), exported transparent and trimmed to its content box (1174×324). It's a single self-contained asset — the yellow field is part of the artwork, not a background — so it works unmodified on both the light header and the product dialog header without a light/dark variant. Used in [index.astro](../src/pages/index.astro) for both the site header (`.logo`) and the dialog toolbar (`.dialog-logo`); both classes size it by `height` with `width: auto` rather than cropping, so update those rules together if the asset's aspect ratio ever changes.
+
 Be Vietnam Pro is hosted locally for Vietnamese glyph support. Product photos come from the owner's allowlisted source images. Missing photos use category placeholders rather than invented product images.
 
 The image pipeline writes content-hashed WebP assets at 240/480/800/1200 pixels, updates `src/data/photo-assets.json`, and preserves originals. It matches macOS Unicode-normalized filenames and removes stale script-generated assets. Catalog, search, Discovery and combo cards use thumbnails; detail-sized assets are requested when opening a product. Current coverage: 28 products, 30 views, 120 responsive files.

@@ -116,20 +116,14 @@ button[hidden],
   gap: 30px;
 }
 .logo {
-  position: relative;
   display: block;
-  width: 174px;
-  height: 70px;
-  overflow: hidden;
+  height: 44px;
   flex-shrink: 0;
 }
 .logo img {
-  position: absolute;
-  width: 135%;
-  max-width: none;
-  height: auto;
-  left: -18%;
-  top: -119%;
+  height: 100%;
+  width: auto;
+  display: block;
 }
 .header-note {
   font-size: 9px;
@@ -717,17 +711,10 @@ dialog[open] {
   background: var(--cream);
   z-index: 1;
 }
-.dialog-wordmark {
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.8px;
-}
-.dialog-wordmark > span {
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--muted);
-  letter-spacing: 0;
-  margin-left: 8px;
+.dialog-logo {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 .icon-button {
   display: flex;
@@ -1061,8 +1048,7 @@ dialog[open] {
     gap: 15px;
   }
   .logo {
-    width: 135px;
-    height: 55px;
+    height: 34px;
   }
   .header-note,
   .local-preview {
