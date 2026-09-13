@@ -9,7 +9,7 @@ import {
   priceLabel,
   searchProducts,
 } from '../domain/presentation';
-import type { Locale, Menu, Product } from '../domain/menu';
+import { stripCaMark, type Locale, type Menu, type Product } from '../domain/menu';
 import { ui, type UiKey } from '../i18n/ui';
 
 const menu: Menu = JSON.parse(document.querySelector('#menu-data')!.textContent!);
@@ -80,7 +80,7 @@ function photoMarkup(p: Product) {
 
 function renderDetails(p: Product) {
   const category = menu.categories.find((c) => c.id === p.categoryId)!;
-  detailPanel.innerHTML = `<div class="detail-media">${photoMarkup(p)}</div><div class="detail-body"><p class="eyebrow">${escape(category.name[locale])}</p><h2 id="detail-title">${escape(p.name[locale])}</h2><p class="detail-description">${escape(p.description[locale])}</p><div class="detail-status">${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges.map((b) => `<span class="badge ${b}">${badgeIcon(b)}${tr(b)}</span>`).join('')}${p.preparationMinutes ? `<span class="detail-time">◷ ${p.preparationMinutes} ${tr('min')}</span>` : ''}</div><h3>${tr('variants')}</h3><div>${p.variants.map((v) => `<div class="variant-row ${v.availability === 'unavailable' ? 'variant-muted' : ''}"><div><span class="variant-label">${escape(v.label[locale])}${v.availability === 'unavailable' || p.availability === 'unavailable' ? `<span class="status">${tr('unavailable')}</span>` : ''}</span>${v.benefits.map((b) => `<span class="benefit">↳ ${escape(b.label[locale])}</span>`).join('')}</div><strong>${formatPrice(v.price)}</strong></div>`).join('')}</div>${p.optionGroups.map((g) => `<h3>${escape(g.label[locale])}</h3>${g.choices.map((c) => `<div class="option-row"><span>${escape(c.label[locale])}</span><span>${c.priceDelta === 0 ? tr('complimentary') : `+${formatPrice(c.priceDelta)}`}</span></div>`).join('')}`).join('')}${productComboLinks(menu, campaigns, p, locale)}<p class="detail-note">${tr('detailNote')}</p></div>`;
+  detailPanel.innerHTML = `<div class="detail-media">${photoMarkup(p)}</div><div class="detail-body"><p class="eyebrow">${escape(stripCaMark(category.name[locale]))}</p><h2 id="detail-title">${escape(p.name[locale])}</h2><p class="detail-description">${escape(p.description[locale])}</p><div class="detail-status">${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges.map((b) => `<span class="badge ${b}">${badgeIcon(b)}${tr(b)}</span>`).join('')}${p.preparationMinutes ? `<span class="detail-time">◷ ${p.preparationMinutes} ${tr('min')}</span>` : ''}</div><h3>${tr('variants')}</h3><div>${p.variants.map((v) => `<div class="variant-row ${v.availability === 'unavailable' ? 'variant-muted' : ''}"><div><span class="variant-label">${escape(v.label[locale])}${v.availability === 'unavailable' || p.availability === 'unavailable' ? `<span class="status">${tr('unavailable')}</span>` : ''}</span>${v.benefits.map((b) => `<span class="benefit">↳ ${escape(b.label[locale])}</span>`).join('')}</div><strong>${formatPrice(v.price)}</strong></div>`).join('')}</div>${p.optionGroups.map((g) => `<h3>${escape(g.label[locale])}</h3>${g.choices.map((c) => `<div class="option-row"><span>${escape(c.label[locale])}</span><span>${c.priceDelta === 0 ? tr('complimentary') : `+${formatPrice(c.priceDelta)}`}</span></div>`).join('')}`).join('')}${productComboLinks(menu, campaigns, p, locale)}<p class="detail-note">${tr('detailNote')}</p></div>`;
 }
 
 function lockCatalog() {
@@ -301,9 +301,8 @@ function applyLocale(next: Locale, preservePosition = false) {
   document.querySelectorAll<HTMLElement>('[data-vi][data-en]').forEach((el) => {
     el.textContent = el.dataset[locale]!;
   });
-  document.querySelectorAll<HTMLElement>('[data-vi-mark]').forEach((el) => {
-    if (locale === 'vi') el.innerHTML = el.dataset.viMark!;
-    else el.textContent = el.dataset.en!;
+  document.querySelectorAll<HTMLElement>('[data-locale-only]').forEach((el) => {
+    el.hidden = el.dataset.localeOnly !== locale;
   });
   document.querySelectorAll<HTMLElement>('[data-label-vi]').forEach((el) => {
     el.setAttribute('aria-label', locale === 'vi' ? el.dataset.labelVi! : el.dataset.labelEn!);

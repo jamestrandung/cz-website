@@ -2,8 +2,16 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { menu, discovery, locations, externalActions } from '../src/data/menu';
-import { menuSchema, searchProducts, priceLabel, isAvailable } from '../src/domain/menu';
+import {
+  menuSchema,
+  searchProducts,
+  priceLabel,
+  isAvailable,
+  splitCaMark,
+  stripCaMark,
+} from '../src/domain/menu';
 import { categoryProducts } from '../src/domain/presentation';
+import { caMarkHtml } from '../src/components/caMark';
 
 test('Signatures lead Coffee and drinks sort by their displayed first-variant price', () => {
   assert.deepEqual(
@@ -82,6 +90,19 @@ test('schema rejects bad prices, IDs, translations, and category references', ()
     modify(m);
     assert.equal(menuSchema.safeParse(m).success, false);
   }
+});
+test('[cà] logo marker ignores case and composition, escapes copy, and is rejected in product copy', () => {
+  assert.deepEqual(splitCaMark('[Cà] đông [cà] phê'), ['', 'Cà', ' đông ', 'cà', ' phê']);
+  assert.equal(stripCaMark('[CÀ][ca\u0300] phê'), 'CÀcà phê');
+  assert.equal(stripCaMark('Cà [ca] phê'), 'Cà [ca] phê');
+  assert.equal(caMarkHtml('a & b'), 'a &amp; b');
+  assert.match(
+    caMarkHtml('<b>[cà]</b>'),
+    /^&lt;b&gt;<span class="sr-only">cà<\/span><svg class="ca-mark"[^]*<\/svg>&lt;\/b&gt;$/,
+  );
+  const m = structuredClone(menu);
+  m.products[0].description.vi = 'Thêm [cà] sữa';
+  assert.match(menuSchema.safeParse(m).error!.message, /only allowed in campaign titles/);
 });
 test('free topping benefits cover all seven toppings on the qualifying M variant', () => {
   const m = structuredClone(menu);

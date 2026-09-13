@@ -67,6 +67,7 @@ The dark/yellow Signature treatment is tied to category ID `signature`. Rename i
 ## Update or reorder a category
 
 - Change `name.vi`, `name.en`, `subtitle.vi`, and `subtitle.en` to edit the text.
+- To draw a word of the name as the cà logo mark, wrap it in brackets, e.g. `"vi": "Món tủ của [Cà]"`. The mark shows only in that category's section heading; the navigation tab, the product detail label, search and the pricing reference use the plain name. Subtitles do not accept the marker. See [Show the cà logo mark in a title](combos-guide.md#show-the-cà-logo-mark-in-a-title) for matching rules and colors.
 - Move the entire category object up or down in `categories` to change its order. Section numbers and navigation follow automatically.
 - Move a dish between categories by changing the dish's `categoryId` to an existing category ID.
 - Editing a category name does not require changing any dish or photo ID.

@@ -95,6 +95,24 @@ test('language persists and updates search, details and availability labels', as
   await expect(page.locator('body')).not.toHaveAttribute('style', /position: fixed/);
 });
 
+test('[cà] in a category name shows the logo mark only in its section heading', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const heading = page.locator('#signature .category-heading h3');
+  await expect(heading.locator('.ca-mark').filter({ visible: true })).toHaveCount(1);
+  await expect(page.getByRole('heading', { name: /Món tủ của\s*Cà/ })).toBeVisible();
+  await expect(page.locator('.category-link[data-category="signature"]')).toHaveText(
+    'Món tủ của Cà',
+  );
+  await page.locator('.header-controls [data-locale="en"]').click();
+  await expect(heading.locator('[data-locale-only="en"]')).toHaveText('Signatures');
+  await expect(heading.locator('.ca-mark').filter({ visible: true })).toHaveCount(0);
+  await page.locator('.header-controls [data-locale="vi"]').click();
+  await page.locator('.product-list [data-product="ca-phe-oreo"]').click();
+  await expect(page.locator('#detail-panel .eyebrow')).toHaveText('Món tủ của Cà');
+});
+
 test('320px layout remains readable and storage failure does not break the menu', async ({
   page,
 }) => {

@@ -1,6 +1,26 @@
 import { z } from 'zod';
 
-export const localizedSchema = z.object({ vi: z.string().min(1), en: z.string().min(1) });
+// "[cà]" in copy marks a word to render as the cà logo mark (components/caMark.ts),
+// e.g. "[Cà] đông [cà] phê". Matching ignores case and Unicode composition, so a
+// decomposed "à" from another editor still counts. split() puts literal text at
+// even indexes and the marked words at odd indexes.
+const CA_MARK = /\[(cà)\]/iu;
+export const splitCaMark = (value: string) => value.normalize('NFC').split(CA_MARK);
+export const hasCaMark = (value: string) => splitCaMark(value).length > 1;
+/** Plain-text form for places that cannot show the mark (attributes, docs). */
+export const stripCaMark = (value: string) => splitCaMark(value).join('');
+
+const plainText = z
+  .string()
+  .min(1)
+  .refine(
+    (s) => !hasCaMark(s),
+    'The [cà] logo marker is only allowed in campaign titles and category names',
+  );
+export const localizedSchema = z.object({ vi: plainText, en: plainText });
+// Only fields whose every render site draws the mark or strips it accept the marker:
+// campaign titles, and category names (mark in the section heading, plain elsewhere).
+export const markedLocalizedSchema = z.object({ vi: z.string().min(1), en: z.string().min(1) });
 export type Localized = z.infer<typeof localizedSchema>;
 export type Locale = 'vi' | 'en';
 const money = z.number().int().nonnegative();
@@ -87,7 +107,9 @@ export const menuSchema = z
     currency: z.literal('VND'),
     contentStatus: z.enum(['illustrative', 'pdf-imported']),
     categories: z
-      .array(z.object({ id: z.string().min(1), name: localizedSchema, subtitle: localizedSchema }))
+      .array(
+        z.object({ id: z.string().min(1), name: markedLocalizedSchema, subtitle: localizedSchema }),
+      )
       .min(1),
     products: z.array(productSchema).min(1),
   })

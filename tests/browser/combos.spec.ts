@@ -76,6 +76,31 @@ test('product entry shows actual combo price and highlights eligible product', a
   await page.locator('.dialog-close').click();
   await expect(page.getByRole('dialog')).not.toBeVisible();
 });
+test('[cà] title marker shows the logo mark on card, dialog and product link across languages', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const card = page.locator('.deal-card[data-combo="ca-dong"]');
+  const cardMarks = card.locator('.deal-title .ca-mark').filter({ visible: true });
+  await expect(cardMarks).toHaveCount(2);
+  await expect(card).toHaveAccessibleName(/Cà\s*đông\s*cà\s*phê/);
+  await page.locator('.header-controls [data-locale="en"]').click();
+  await expect(card.locator('[data-locale-only="en"]')).toBeVisible();
+  await expect(card.locator('[data-locale-only="en"]')).toHaveText('Better with company');
+  await expect(cardMarks).toHaveCount(0);
+  await page.locator('.header-controls [data-locale="vi"]').click();
+  await expect(cardMarks).toHaveCount(2);
+  await card.click();
+  await expect(page.locator('#combo-title .ca-mark')).toHaveCount(2);
+  await expect(page.getByRole('heading', { name: /Cà\s*đông\s*cà\s*phê/ })).toBeVisible();
+  await page.locator('.dialog-languages [data-locale="en"]').click();
+  await expect(page.locator('#combo-title')).toHaveText('Better with company');
+  await page.locator('.dialog-languages [data-locale="vi"]').click();
+  await expect(page.locator('#combo-title .ca-mark')).toHaveCount(2);
+  await page.keyboard.press('Escape');
+  await page.locator('.product-list [data-product="tra-sua-taro"]').click();
+  await expect(page.locator('.product-combo-link[data-combo="ca-dong"] .ca-mark')).toHaveCount(2);
+});
 test('ST has no artificial S/M options and breakfast keeps sausage extra', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 740 });
   await page.goto('/');

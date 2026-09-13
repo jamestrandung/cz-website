@@ -41,7 +41,7 @@ Paths below are relative to the repository root.
 | `src/data/products.json` | Authoritative editable catalog: categories, bilingual content, standalone variants/prices, tags, options, benefits, availability |
 | `src/data/menu.ts` | Adds generated photos or placeholders, runs `menuSchema`, and defines Discovery, store links, and social/delivery links |
 | `src/data/combos.ts` | Editorial campaign records, base prices, eligibility lists/filter helpers, per-choice pricing policies, food groups, quantities, extras |
-| `src/domain/menu.ts` | Product/menu/option/benefit/photo schemas and inferred TypeScript types |
+| `src/domain/menu.ts` | Product/menu/option/benefit/photo schemas and inferred TypeScript types; `[cà]` logo marker parsing and the rule that only campaign titles and category names accept it |
 | `src/domain/combos.ts` | Campaign schema, size order, variant resolution, reverse membership, product-specific starting price, validation |
 | `src/domain/presentation.ts` | VND formatting, first-variant price, availability, category ordering, accent-insensitive search |
 | `src/domain/images.ts` | Thumbnail and detail `srcset` strings |
@@ -52,6 +52,7 @@ Paths below are relative to the repository root.
 | `src/scripts/menu.ts` | Search, product/combo navigation, modal history, photo switching, localization, scroll/focus restoration, slider controls |
 | `src/scripts/combo-view.ts` | Browser-rendered combo choices, per-variant surcharges/benefits, product-to-combo links |
 | `src/i18n/ui.ts` and `Localized.astro` | Bilingual interface text and initial localized markup |
+| `src/components/caMark.ts` | "cà" logo mark SVG and HTML for copy containing the `[cà]` marker, shared by `Localized.astro` and `combo-view.ts` |
 | `src/styles/global.css`, `combos.css` | Brand tokens, responsive catalog/dialog/slider styles |
 | `scripts/product-photos.json` | Allowlist linking product IDs to original image filenames |
 | `scripts/prepare-photos.mjs`, `image-tools.mjs`, `optimize-image.mjs` | Image preparation and reusable optimization tools |
@@ -134,7 +135,7 @@ The Vietnamese catalog and slider cards are rendered into static HTML. `menu-dat
 
 One native dialog hosts search, product details, and combo details. History state records view/depth, product/campaign/offer IDs, originating product, scroll, focus target, and photo index. Opening another view pushes state; switching an offer replaces the current state. Back restores the parent, including the selected combo offer. Closing or Escape returns through the overlay depth to the catalog and restores page scroll/focus. Catalog scrolling is locked while the dialog is open. A reload resets an overlay state to the catalog. `#deals` is a section anchor; there are no per-product/per-combo public URLs.
 
-VI/EN is stored locally when storage is available, with fallback when storage is blocked. Dynamic search/details/combos are rerendered on language change. Static text uses localized markup. Search normalizes accents, whitespace, case and đ, then ranks matches in names/aliases above broader descriptions/categories. Search is not sorted by combo savings or by descending price.
+VI/EN is stored locally when storage is available, with fallback when storage is blocked. Dynamic search/details/combos are rerendered on language change. Static text uses localized markup: plain copy stores both languages in `data-vi`/`data-en` and the toggle swaps `textContent`; copy with a `[cà]` marker renders both languages as `data-locale-only` spans and the toggle switches `hidden`, so the logo mark is never flattened to text. Search normalizes accents, whitespace, case and đ, then ranks matches in names/aliases above broader descriptions/categories. Search is not sorted by combo savings or by descending price.
 
 The slider uses native horizontal scrolling and CSS snap, with arrow controls and reduced-motion support. It does not autoplay. Mobile shows a partial next card. Dialog details require JavaScript; the no-JavaScript guarantee is readability of the catalog, not interactive combo browsing.
 
@@ -153,6 +154,12 @@ Full brand doc is WIP; these are the authoritative values until it lands. Update
 
 `public/images/logo.png` is the horizontal "cà zone" lockup (yellow badge, page 29 of the brand Canva design `DAFHyyOt8ds`), exported transparent and trimmed to its content box (1174×324). It's a single self-contained asset — the yellow field is part of the artwork, not a background — so it works unmodified on both the light header and the product dialog header without a light/dark variant. Used in [index.astro](../src/pages/index.astro) for both the site header (`.logo`) and the dialog toolbar (`.dialog-logo`); both classes size it by `height` with `width: auto` rather than cropping, so update those rules together if the asset's aspect ratio ever changes.
 
+### Logo mark
+
+The "cà" box mark (page 21 of `DAFHyyOt8ds`, set in Acherus Militant Bold) is inline SVG in `src/components/caMark.ts`, not a font or image. Its glyph outlines were extracted exactly from the font subset embedded in Canva's PDF export, so no webfont license or tracing is involved. To replace it, export that page as PDF and extract the glyph paths again; keep the box and paths in one coordinate space and update `CA_MARK_WIDTH`/`CA_MARK_HEIGHT`.
+
+Copy opts in with the `[cà]` marker; see [Combos guide](combos-guide.md#show-the-cà-logo-mark-in-a-title). Campaign titles show the mark wherever they render (slider card, combo dialog, product combo link). Category names show it only in their section heading: `index.astro` passes the stripped name to the navigation tab, and `menu.ts`, search and the pricing export use `stripCaMark`. A new render site for either field must do one or the other. `.ca-mark` in `global.css` sizes it at `1em` with `vertical-align: -0.18em`, which matches the glyph's x-height and baseline to Be Vietnam Pro; revisit both values if the body font changes. The box uses `currentColor` and the glyph is white, except on the `ink` theme (`combos.css`) and the Signature section heading (`global.css`), where the glyph takes the card color. The mark is `aria-hidden`; a `.sr-only` copy of the word keeps it in the accessible name.
+
 Be Vietnam Pro is hosted locally for Vietnamese glyph support. Product photos come from the owner's allowlisted source images. Missing photos use category placeholders rather than invented product images.
 
 The image pipeline writes content-hashed WebP assets at 240/480/800/1200 pixels, updates `src/data/photo-assets.json`, and preserves originals. It matches macOS Unicode-normalized filenames and removes stale script-generated assets. Catalog, search, Discovery and combo cards use thumbnails; detail-sized assets are requested when opening a product. Current coverage: 28 products, 30 views, 120 responsive files.
@@ -163,12 +170,12 @@ Track the generated manifest and assets together. `tmp/reports/photo-size-report
 
 | Check | Coverage |
 | --- | --- |
-| `menuSchema` | Required translations, money types, product/category/variant IDs, option bounds and references, photo variant references, benefit references/applicability |
-| `validateCampaigns` | Campaign/offer/group/choice duplicates within scope, required data, product/image/extra references, exact variant override references, nonempty resolved choices and resolvable size pricing |
+| `menuSchema` | Required translations, money types, product/category/variant IDs, option bounds and references, photo variant references, benefit references/applicability, no `[cà]` marker in catalog copy other than category names |
+| `validateCampaigns` | Campaign/offer/group/choice duplicates within scope, required data, product/image/extra references, exact variant override references, nonempty resolved choices and resolvable size pricing, `[cà]` marker only in titles |
 | `loadMenu()` | Referenced effective images and responsive files exist locally |
-| `npm run menu:check` | Runs those boundaries plus hyphenated catalog IDs, Discovery references, photo mapping consistency and stale mapping checks |
-| `npm test` | 19 current domain/data cases, including source tags, S/M rules, M-only charges, future Matcha sizes, sold-out baseline behavior, benefits, extras and reverse links |
-| `npm run test:e2e` | 30 current desktop/mobile cases, including dialogs, Back, language, slider, 320px overflow, benefits, price labels and no-JavaScript catalog |
+| `npm run menu:check` | Runs those boundaries plus hyphenated catalog IDs, Discovery references, photo mapping consistency, stale mapping checks and no `[cà]` marker in unvalidated copy (Discovery, links, deals heading, interface text) |
+| `npm test` | 20 current domain/data cases, including source tags, S/M rules, M-only charges, future Matcha sizes, sold-out baseline behavior, benefits, extras, reverse links and `[cà]` marker parsing/validation |
+| `npm run test:e2e` | 34 current desktop/mobile cases, including dialogs, Back, language, slider, 320px overflow, benefits, price labels, the `[cà]` logo mark in combo titles and the Signature heading across languages, and no-JavaScript catalog |
 | `npm run test:images` | Image pipeline tests; relevant when changing image tooling |
 | `npm run build` | Astro type diagnostics and static production build |
 

@@ -16,11 +16,24 @@ Each object passed to `validateCampaigns(menu, [...])` is a card (campaign).
 
 - Give it a stable unique `id`, e.g. `afternoon-break`.
 - Set `active: true` to show it, or `false` to hide it and its catalog memberships.
-- Write bilingual `title`, `description`, and `note`.
+- Write bilingual `title`, `description`, and `note`. A title can show the cà logo mark; see below.
 - Choose `theme`: `yellow`, `peach`, `sage`, or `ink`.
 - Set `imageProductIds` to one or two existing product IDs. Use pictures of items that can actually be paired. Images use the existing optimized catalog photos; original full-size files are never loaded.
 - Add one or more `offers`. Each offer has an ID, bilingual label, integer VND base price, choice groups, and optional extras. One card can group ST1/ST2 or 2/3/4-person offers.
 - Reorder cards or offers by moving their objects in the array. Remove an object to delete it.
+
+## Show the cà logo mark in a title
+
+Wrap a word in brackets to draw it as the brand's black "cà" box mark instead of plain text:
+
+```ts
+title: t('[Cà] đông [cà] phê', 'Better with company'),
+```
+
+- Use `[cà]` or `[Cà]` in either language. Upper case and accents typed by a different keyboard also match; the mark itself always looks the same.
+- Only campaign `title` and category `name` accept the marker (for categories, see [Maintaining categories and dishes](maintaining-menu.md#update-or-reorder-a-category)). Schema validation fails if it appears in a description, note, offer or group label, category subtitle, or product text; `npm run menu:check` also rejects it in Discovery, the deals section heading, links and interface text.
+- The mark appears on the slider card, the combo dialog heading and the product's combo link. Screen readers still read the word, and plain-text outputs such as [Current pricing reference](CURRENT_PRICING.md) drop the brackets.
+- The mark scales with the title's font size. Its box uses the card's text color: dark with white letters on `yellow`, `peach` and `sage`, and cream with letters in the card color on `ink`. In the dark Signature category heading it is yellow with dark letters.
 
 ## Define what is included
 

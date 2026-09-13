@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { menu } from '../src/data/menu';
 import { campaigns } from '../src/data/combos';
 import { resolveGroup } from '../src/domain/combos';
+import { stripCaMark } from '../src/domain/menu';
 import { formatPrice } from '../src/domain/presentation';
 const cell = (value: unknown) =>
   String(value ?? '—')
@@ -43,7 +44,7 @@ put(
   '',
 );
 for (const category of menu.categories) {
-  put(`### ${category.name.vi} / ${category.name.en}`, '');
+  put(`### ${stripCaMark(category.name.vi)} / ${stripCaMark(category.name.en)}`, '');
   table(
     [
       'Product ID',
@@ -129,7 +130,7 @@ put(
 );
 for (const c of campaigns) {
   put(
-    `### ${c.title.vi} (${c.id})`,
+    `### ${stripCaMark(c.title.vi)} (${c.id})`,
     '',
     `Status: **${c.active ? 'active' : 'inactive'}**. Theme: ${c.theme}. Card images: ${c.imageProductIds.join(', ')}.`,
     '',

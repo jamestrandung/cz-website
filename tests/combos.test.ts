@@ -102,6 +102,11 @@ test('reverse memberships and validation prevent stale references', () => {
   const stale = structuredClone(campaigns);
   stale[0].offers[0].groups[0].choices[0].policy.variantPrices.deleted = 0;
   assert.throws(() => validateCampaigns(menu, stale), /Unknown combo variant/);
+  const marked = structuredClone(campaigns);
+  marked[0].title.en = 'A [cà] break';
+  assert.doesNotThrow(() => validateCampaigns(menu, marked));
+  marked[0].note.vi = 'Thêm [cà] sữa';
+  assert.throws(() => validateCampaigns(menu, marked), /only allowed in campaign titles/);
   const inactive = structuredClone(campaigns);
   inactive.forEach((c) => (c.active = false));
   assert.deepEqual(memberships(menu, inactive, get('butter-floss-bread')), []);

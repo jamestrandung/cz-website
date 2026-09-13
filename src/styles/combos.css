@@ -78,6 +78,10 @@
   background: #28282d;
   color: var(--cream);
 }
+/* The logo mark's box follows the cream text here, so cut the glyph in the card color. */
+.deal-ink .ca-mark g {
+  fill: #28282d;
+}
 .deal-card-top {
   display: flex;
   justify-content: space-between;

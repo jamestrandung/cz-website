@@ -1,5 +1,11 @@
 import { z } from 'zod';
-import { localizedSchema, type Menu, type Product, type Variant } from './menu';
+import {
+  localizedSchema,
+  markedLocalizedSchema,
+  type Menu,
+  type Product,
+  type Variant,
+} from './menu';
 const id = z.string().min(1);
 const money = z.number().int().nonnegative();
 // Size labels and upgrade amounts are content, not application branches.
@@ -30,7 +36,7 @@ const offerSchema = z.object({
 export const campaignSchema = z.object({
   id,
   active: z.boolean(),
-  title: localizedSchema,
+  title: markedLocalizedSchema,
   description: localizedSchema,
   theme: z.enum(['yellow', 'sage', 'peach', 'ink']),
   imageProductIds: z.array(id).min(1).max(2),

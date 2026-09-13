@@ -4,7 +4,6 @@ import { menu } from '../data/menu';
 import { formatPrice } from '../domain/presentation';
 import { thumbnailSet } from '../domain/images';
 import Localized from './Localized.astro';
-import MarkedTitle from './MarkedTitle.astro';
 import Icon from './Icon.astro';
 const active = campaigns.filter((c) => c.active);
 ---
@@ -45,7 +44,7 @@ const active = campaigns.filter((c) => c.active);
             <Icon name="arrow" size={19} />
           </span>
           <strong class="deal-title">
-            <MarkedTitle value={c.title} markSize={24} />
+            <Localized value={c.title} />
           </strong>
           <span class="deal-summary">
             <Localized value={c.description} />

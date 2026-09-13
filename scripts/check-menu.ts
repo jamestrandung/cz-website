@@ -5,9 +5,11 @@ import { fileURLToPath } from 'node:url';
 process.chdir(fileURLToPath(new URL('../', import.meta.url)));
 try {
   const { loadMenu } = await import('../src/content/loadMenu');
-  const { discovery } = await import('../src/data/menu');
+  const { discovery, externalActions, locations } = await import('../src/data/menu');
   const menu = loadMenu();
-  const { campaigns } = await import('../src/data/combos');
+  const { campaigns, dealsSection } = await import('../src/data/combos');
+  const { ui } = await import('../src/i18n/ui');
+  const { hasCaMark } = await import('../src/domain/menu');
   console.log(
     `Combos OK: ${campaigns.length} campaigns; product references and variant pricing validated.`,
   );
@@ -27,6 +29,9 @@ try {
     fail('Discovery supports at most two distinct featured product IDs.');
   for (const id of discovery.featuredProductIds)
     if (!menu.products.some((p) => p.id === id)) fail(`Unknown Discovery product: ${id}`);
+  // Schemas reject the marker in catalog and campaign copy; this covers unvalidated copy.
+  if (hasCaMark(JSON.stringify([discovery, externalActions, locations, dealsSection, ui])))
+    fail('The [cà] logo marker is only allowed in campaign titles and category names.');
   const mapping = JSON.parse(readFileSync(resolve('scripts/product-photos.json'), 'utf8'));
   for (const [id, photos] of Object.entries(mapping) as [string, { variantIds?: string[] }[]][]) {
     const product = menu.products.find((p) => p.id === id);

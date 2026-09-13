@@ -2,6 +2,7 @@
 import { discovery, externalActions, locations } from '../data/menu';
 import { loadMenu } from '../content/loadMenu';
 import { categoryProducts } from '../domain/presentation';
+import { stripCaMark } from '../domain/menu';
 import { thumbnailSet } from '../domain/images';
 import { ui } from '../i18n/ui';
 import Localized from '../components/Localized.astro';
@@ -130,7 +131,7 @@ if (!menu.categories.some((c) => c.id === discovery.targetCategory) || featured.
                 data-category={c.id}
                 aria-current={i === 0 ? 'true' : undefined}
               >
-                <Localized value={c.name} />
+                <Localized value={{ vi: stripCaMark(c.name.vi), en: stripCaMark(c.name.en) }} />
               </a>
             ))}
           </div>

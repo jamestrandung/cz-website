@@ -1,12 +1,23 @@
 ---
-import type { Localized } from '../domain/menu';
+import { hasCaMark, type Localized } from '../domain/menu';
+import { caMarkHtml } from './caMark';
 interface Props {
   value: Localized;
   class?: string;
 }
 const { value, class: className } = Astro.props;
+// The language toggle swaps textContent, which would flatten the [cà] logo mark,
+// so marked copy renders both languages and the toggle switches `hidden` instead.
+const marked = hasCaMark(value.vi) || hasCaMark(value.en);
 ---
 
-<span class={className} data-vi={value.vi} data-en={value.en}>
-  {value.vi}
-</span>
+{marked ? (
+  <span class={className}>
+    <span data-locale-only="vi" set:html={caMarkHtml(value.vi)} />
+    <span data-locale-only="en" hidden set:html={caMarkHtml(value.en)} />
+  </span>
+) : (
+  <span class={className} data-vi={value.vi} data-en={value.en}>
+    {value.vi}
+  </span>
+)}
