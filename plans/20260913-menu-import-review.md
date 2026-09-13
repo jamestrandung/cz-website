@@ -1,10 +1,12 @@
 # Full menu import review
 
+> Archived planning/source record. Retained for context; it may describe superseded proposals, prices, counts, or behavior. Use [current architecture](../docs/ARCHITECTURE.md) and [current pricing rules](../docs/PRICING_RULES.md) for maintenance. Do not use this record as current implementation instructions.
+
 Source: `Menu - A3.pdf`, page 1. Imported 13 September 2026. Prices are integer VND in the data file; values below are shown in thousands of VND for comparison with the PDF.
 
-**48 items · 66 variants · 9 categories.**
+**50 items · 68 variants · 9 categories.** Includes the two additions from Menu Food.pdf and owner corrections.
 
-Validation: all 69 printed price values (66 variants plus three food-extra charges) match a separate PDF text extraction by value/count. Names, column placement, badges, and free-offer marks were also reviewed visually. Build/type checks, 11 data tests, and 18 browser tests passed.
+Original import validation (before food additions): all 69 printed price values (66 variants plus three food-extra charges) match a separate PDF text extraction by value/count. Names, column placement, badges, and free-offer marks were also reviewed visually. Build/type checks, 11 data tests, and 18 browser tests passed.
 
 ## Source transcription
 
@@ -45,11 +47,13 @@ Validation: all 69 printed price values (66 variants plus three food-extra charg
 | Chống đói | Sừng trâu chà bông | Một phần 45 | — | — |
 | Chống đói | Sừng trâu hạnh nhân | Một phần 45 | — | — |
 | Chống đói | Sừng trâu chấm sữa | Một phần 45 | must-try | — |
+| Chống đói | Ốp la bơ tỏi | Một phần 45 | — | Xúc xích +10K |
 | Chống đói | Mì ly | Một phần 20 | — | Xúc xích · mỗi cây +10K; Gà xé · mỗi phần +10K |
 | Chống buồn miệng | Tiramisu | Một phần 45 | must-try | — |
 | Chống buồn miệng | Bánh phô mai chanh dây | Một phần 45 | — | — |
 | Chống buồn miệng | Khoai tây chiên không dầu | Một phần 40 | bestseller | 15 min |
-| Chống buồn miệng | Croffle caramel | Một phần 35 | — | 15 min |
+| Chống buồn miệng | Croffle caramel | Một phần 40 | — | 15 min |
+| Chống buồn miệng | Bánh mì bơ chà bông | Một phần 40 | — | Combo 2 (ST2/TG2) |
 | Chống buồn miệng | Khô gà lá chanh | Một phần 35 | — | — |
 | Topping | Trân châu đen | Một phần 10 | bestseller | — |
 | Topping | Sương sáo | Một phần 10 | — | — |
@@ -74,8 +78,8 @@ Validation: all 69 printed price values (66 variants plus three food-extra charg
 - S/M values are sizes, not volumes; no cup volume has been invented. Coffee S/M are shown as iced because the PDF separately identifies HOT. Tea/healthy drink variants retain only the S/M attributes printed in the PDF. Bình trà dưỡng nhan appears in the M column and Đá me đậu phộng in the S column.
 - All demo unavailable states have been removed. Availability defaults to available because the PDF has no temporary stock status; these fields remain editable.
 - Free-offer quantity and maximum food-extra quantities are not specified by the source, so their limits remain unset. Confirm before adding selectable ordering controls. Eligibility is fully configured; no assumption that multiple free toppings can be selected is made.
-- ST1/ST2/TG1/TG2 are preserved as source codes without interpreting or displaying them.
-- Photo update: 26 products now use the supplied named photographs. Other products use branded category icons. See `product-photo-plan.md` for the reviewed source mapping and coverage.
+- ST1/ST2/TG1/TG2 drive combo memberships. Size and surcharge policies follow owner clarification; see `../docs/combos-guide.md`.
+- Photo update: 28 products now use the supplied named photographs. Other products use branded category icons. See `20260913-product-photo-integration.md` for the reviewed source mapping and coverage.
 
 ## External links
 

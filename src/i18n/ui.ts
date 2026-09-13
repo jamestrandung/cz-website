@@ -22,7 +22,7 @@ export const ui = {
   results: t('món được tìm thấy', 'items found'),
   clear: t('Xoá tìm kiếm', 'Clear search'),
   close: t('Đóng', 'Close'),
-  back: t('Trở lại kết quả', 'Back to results'),
+  back: t('Trở lại', 'Back'),
   unavailable: t('Tạm hết', 'Unavailable'),
   bestseller: t('Bán chạy', 'Best seller'),
   'must-try': t('Nên thử', 'Must try'),

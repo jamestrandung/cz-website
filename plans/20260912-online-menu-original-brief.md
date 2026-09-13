@@ -1,5 +1,7 @@
 # Cà Zone Online Menu — Codex Implementation Brief
 
+> Archived planning/source record. Retained for context; it may describe superseded proposals, prices, counts, or behavior. Use [current architecture](../docs/ARCHITECTURE.md) and [current pricing rules](../docs/PRICING_RULES.md) for maintenance. Do not use this record as current implementation instructions.
+
 ## 1. Goal
 
 Build a fast, mobile-first online menu for Cà Zone to replace the current A3 PDF experience.

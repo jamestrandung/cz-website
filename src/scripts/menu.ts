@@ -1,3 +1,5 @@
+import { comboMarkup, productComboLinks, productComboNote } from './combo-view';
+import type { Campaign } from '../domain/combos';
 import { thumbnailSet, detailSet } from '../domain/images';
 import { badgeIcon } from '../components/badgeIcon';
 import { formatPrice, isAvailable, priceLabel, searchProducts } from '../domain/presentation';
@@ -5,6 +7,9 @@ import type { Locale, Menu, Product } from '../domain/menu';
 import { ui, type UiKey } from '../i18n/ui';
 
 const menu: Menu = JSON.parse(document.querySelector('#menu-data')!.textContent!);
+const campaigns: Campaign[] = JSON.parse(
+  document.querySelector('#combo-data')?.textContent ?? '[]',
+);
 const dialog = document.querySelector<HTMLDialogElement>('#menu-dialog')!;
 const detailPanel = document.querySelector<HTMLElement>('#detail-panel')!;
 const searchPanel = document.querySelector<HTMLElement>('#search-panel')!;
@@ -26,23 +31,27 @@ let locale: Locale = document.documentElement.lang === 'en' ? 'en' : 'vi';
 const tr = (key: UiKey) => ui[key][locale];
 let currentProduct: Product | null = null;
 let currentPhoto = 0;
-let searchScroll = 0;
 let catalogScroll = 0;
 let returnFocus: HTMLElement | null = null;
 let navigatingHistory = false;
 type OverlayState = {
   czMenu: true;
-  view: 'search' | 'detail';
+  view: 'search' | 'detail' | 'combo';
+  comboId?: string;
+  offerId?: string;
+  highlightId?: string;
+  scroll?: number;
+  focusTarget?: string;
+  photoIndex?: number;
   depth: number;
   productId?: string;
-  fromSearch?: boolean;
 };
 let overlayState: OverlayState | null = null;
 // A reload starts at the catalog, even if it happened with a dialog open.
 if (history.state?.czMenu) history.replaceState(null, '');
 
 function rowMarkup(p: Product) {
-  return `<button type="button" class="product-row ${!isAvailable(p) ? 'is-unavailable' : ''}" data-product="${escape(p.id)}" aria-haspopup="dialog"><span class="product-image"><img src="${escape(p.image)}" ${thumbnailSet(p) ? `srcset="${escape(thumbnailSet(p)!)}" sizes="70px"` : ''} alt="" width="240" height="240" loading="lazy" decoding="async"></span><span class="product-copy"><span class="product-name">${escape(p.name[locale])}</span><span class="product-summary">${escape(p.summary[locale])}</span><span class="product-meta"><span class="price">${priceLabel(p)}</span>${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges[0] ? `<span class="badge ${p.badges[0]}">${badgeIcon(p.badges[0])}${tr(p.badges[0])}</span>` : ''}</span></span><span class="product-open">${arrow}</span></button>`;
+  return `<button type="button" class="product-row ${!isAvailable(p) ? 'is-unavailable' : ''}" data-product="${escape(p.id)}" aria-haspopup="dialog"><span class="product-image"><img src="${escape(p.image)}" ${thumbnailSet(p) ? `srcset="${escape(thumbnailSet(p)!)}" sizes="70px"` : ''} alt="" width="240" height="240" loading="lazy" decoding="async"></span><span class="product-copy"><span class="product-name">${escape(p.name[locale])}</span><span class="product-summary">${escape(p.summary[locale])}</span><span class="product-meta"><span class="price">${priceLabel(p)}</span>${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges[0] ? `<span class="badge ${p.badges[0]}">${badgeIcon(p.badges[0])}${tr(p.badges[0])}</span>` : ''}</span>${productComboNote(menu, campaigns, p, locale)}</span><span class="product-open">${arrow}</span></button>`;
 }
 
 function renderSearch() {
@@ -69,7 +78,7 @@ function photoMarkup(p: Product) {
 
 function renderDetails(p: Product) {
   const category = menu.categories.find((c) => c.id === p.categoryId)!;
-  detailPanel.innerHTML = `<div class="detail-media">${photoMarkup(p)}</div><div class="detail-body"><p class="eyebrow">${escape(category.name[locale])}</p><h2 id="detail-title">${escape(p.name[locale])}</h2><p class="detail-description">${escape(p.description[locale])}</p><div class="detail-status">${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges.map((b) => `<span class="badge ${b}">${badgeIcon(b)}${tr(b)}</span>`).join('')}${p.preparationMinutes ? `<span class="detail-time">◷ ${p.preparationMinutes} ${tr('min')}</span>` : ''}</div><h3>${tr('variants')}</h3><div>${p.variants.map((v) => `<div class="variant-row ${v.availability === 'unavailable' ? 'variant-muted' : ''}"><div><span class="variant-label">${escape(v.label[locale])}${v.availability === 'unavailable' || p.availability === 'unavailable' ? `<span class="status">${tr('unavailable')}</span>` : ''}</span>${v.benefits.map((b) => `<span class="benefit">↳ ${escape(b.label[locale])}</span>`).join('')}</div><strong>${formatPrice(v.price)}</strong></div>`).join('')}</div>${p.optionGroups.map((g) => `<h3>${escape(g.label[locale])}</h3>${g.choices.map((c) => `<div class="option-row"><span>${escape(c.label[locale])}</span><span>${c.priceDelta === 0 ? tr('complimentary') : `+${formatPrice(c.priceDelta)}`}</span></div>`).join('')}`).join('')}<p class="detail-note">${tr('detailNote')}</p></div>`;
+  detailPanel.innerHTML = `<div class="detail-media">${photoMarkup(p)}</div><div class="detail-body"><p class="eyebrow">${escape(category.name[locale])}</p><h2 id="detail-title">${escape(p.name[locale])}</h2><p class="detail-description">${escape(p.description[locale])}</p><div class="detail-status">${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges.map((b) => `<span class="badge ${b}">${badgeIcon(b)}${tr(b)}</span>`).join('')}${p.preparationMinutes ? `<span class="detail-time">◷ ${p.preparationMinutes} ${tr('min')}</span>` : ''}</div><h3>${tr('variants')}</h3><div>${p.variants.map((v) => `<div class="variant-row ${v.availability === 'unavailable' ? 'variant-muted' : ''}"><div><span class="variant-label">${escape(v.label[locale])}${v.availability === 'unavailable' || p.availability === 'unavailable' ? `<span class="status">${tr('unavailable')}</span>` : ''}</span>${v.benefits.map((b) => `<span class="benefit">↳ ${escape(b.label[locale])}</span>`).join('')}</div><strong>${formatPrice(v.price)}</strong></div>`).join('')}</div>${productComboLinks(menu, campaigns, p, locale)}${p.optionGroups.map((g) => `<h3>${escape(g.label[locale])}</h3>${g.choices.map((c) => `<div class="option-row"><span>${escape(c.label[locale])}</span><span>${c.priceDelta === 0 ? tr('complimentary') : `+${formatPrice(c.priceDelta)}`}</span></div>`).join('')}`).join('')}<p class="detail-note">${tr('detailNote')}</p></div>`;
 }
 
 function lockCatalog() {
@@ -92,17 +101,37 @@ function closeDialog() {
   currentProduct = null;
 }
 
+function renderCombo() {
+  const c = campaigns.find((c) => c.id === overlayState?.comboId && c.active);
+  if (!c || !overlayState) {
+    closeDialog();
+    return;
+  }
+  detailPanel.innerHTML = comboMarkup(
+    menu,
+    c,
+    overlayState.offerId,
+    locale,
+    overlayState.highlightId,
+  );
+}
 function showState(state: OverlayState) {
-  const wasDetail = overlayState?.view === 'detail';
   lockCatalog();
   overlayState = state;
-  backButton.hidden = !state.fromSearch;
+  backButton.hidden = state.depth <= 1;
   if (state.view === 'search') {
     currentProduct = null;
     detailPanel.hidden = true;
     searchPanel.hidden = false;
     dialog.setAttribute('aria-labelledby', 'search-title');
     renderSearch();
+  } else if (state.view === 'combo') {
+    currentProduct = null;
+    searchPanel.hidden = true;
+    detailPanel.hidden = false;
+    renderCombo();
+    if (!overlayState) return;
+    dialog.setAttribute('aria-labelledby', 'combo-title');
   } else {
     const product = menu.products.find((p) => p.id === state.productId);
     if (!product) {
@@ -110,21 +139,32 @@ function showState(state: OverlayState) {
       return;
     }
     currentProduct = product;
-    currentPhoto = 0;
+    currentPhoto = state.photoIndex ?? 0;
     searchPanel.hidden = true;
     detailPanel.hidden = false;
     renderDetails(product);
     dialog.setAttribute('aria-labelledby', 'detail-title');
   }
   if (!dialog.open) dialog.showModal();
-  dialogScroll.scrollTop = state.view === 'search' && wasDetail ? searchScroll : 0;
-  if (state.view === 'search') {
-    searchInput.focus({ preventScroll: true });
-  } else closeButton.focus({ preventScroll: true });
+  dialogScroll.scrollTop = state.scroll ?? 0;
+  const returnTarget = state.focusTarget
+    ? dialogScroll.querySelector<HTMLElement>(state.focusTarget)
+    : null;
+  if (returnTarget) returnTarget.focus({ preventScroll: true });
+  else if (state.view === 'search') searchInput.focus({ preventScroll: true });
+  else closeButton.focus({ preventScroll: true });
 }
-
-function pushState(state: OverlayState) {
+function pushState(state: OverlayState, focusTarget?: string) {
   if (navigatingHistory) return;
+  if (overlayState) {
+    overlayState = {
+      ...overlayState,
+      scroll: dialogScroll.scrollTop,
+      focusTarget,
+      photoIndex: currentPhoto,
+    };
+    history.replaceState(overlayState, '');
+  }
   history.pushState(state, '');
   showState(state);
 }
@@ -177,28 +217,56 @@ document.addEventListener('click', (event) => {
     const index = Number(photoButton.dataset.photoIndex);
     if (currentProduct.photos[index]) {
       currentPhoto = index;
+      if (overlayState) {
+        overlayState.photoIndex = index;
+        history.replaceState(overlayState, '');
+      }
       detailPanel.querySelector('.detail-media')!.innerHTML = photoMarkup(currentProduct);
       detailPanel
         .querySelector<HTMLButtonElement>(`[data-photo-index="${index}"]`)!
         .focus({ preventScroll: true });
     }
   }
+  const offerButton = event.target.closest<HTMLElement>('[data-combo-offer]');
+  if (offerButton && overlayState?.view === 'combo') {
+    overlayState.offerId = offerButton.dataset.comboOffer;
+    history.replaceState(overlayState, '');
+    const scroll = dialogScroll.scrollTop;
+    renderCombo();
+    detailPanel
+      .querySelector<HTMLElement>(`[data-combo-offer="${overlayState.offerId}"]`)
+      ?.focus({ preventScroll: true });
+    dialogScroll.scrollTop = scroll;
+    return;
+  }
+  const comboButton = event.target.closest<HTMLElement>('[data-combo]');
+  if (comboButton) {
+    pushState(
+      {
+        czMenu: true,
+        view: 'combo',
+        depth: (overlayState?.depth ?? 0) + 1,
+        comboId: comboButton.dataset.combo,
+        offerId: comboButton.dataset.offer,
+        highlightId: comboButton.dataset.highlight,
+      },
+      `[data-combo="${comboButton.dataset.combo}"]`,
+    );
+    return;
+  }
   const trigger = event.target.closest<HTMLElement>('[data-product]');
   if (trigger) {
-    const fromSearch = overlayState?.view === 'search';
-    if (fromSearch) searchScroll = dialogScroll.scrollTop;
-    pushState({
-      czMenu: true,
-      view: 'detail',
-      depth: fromSearch ? 2 : 1,
-      productId: trigger.dataset.product,
-      fromSearch,
-    });
+    pushState(
+      {
+        czMenu: true,
+        view: 'detail',
+        depth: (overlayState?.depth ?? 0) + 1,
+        productId: trigger.dataset.product,
+      },
+      `[data-product="${trigger.dataset.product}"]`,
+    );
   }
-  if (event.target.closest('[data-search]')) {
-    searchScroll = 0;
-    pushState({ czMenu: true, view: 'search', depth: 1 });
-  }
+  if (event.target.closest('[data-search]')) pushState({ czMenu: true, view: 'search', depth: 1 });
   const language = event.target.closest<HTMLButtonElement>('[data-locale]');
   if (language) applyLocale(language.dataset.locale as Locale, true);
 });
@@ -208,7 +276,6 @@ document.querySelector('.search-form')!.addEventListener('submit', (event) => {
 });
 searchInput.addEventListener('input', () => {
   renderSearch();
-  searchScroll = 0;
 });
 document.querySelector('.search-clear')!.addEventListener('click', () => {
   searchInput.value = '';
@@ -255,6 +322,7 @@ function applyLocale(next: Locale, preservePosition = false) {
   searchInput.placeholder = tr('searchPlaceholder');
   document.querySelector('.search-clear')!.setAttribute('aria-label', tr('clear'));
   if (currentProduct) renderDetails(currentProduct);
+  if (overlayState?.view === 'combo') renderCombo();
   if (!searchPanel.hidden) renderSearch();
   dialogScroll.scrollTop = dialogPosition;
   if (preservePosition && currentAnchor && offset !== undefined && !dialog.open)
@@ -358,3 +426,29 @@ new ResizeObserver(() => {
   trackCategory();
 }).observe(nav);
 applyLocale(locale);
+
+const dealTrack = document.querySelector<HTMLElement>('.deals-track');
+if (dealTrack) {
+  const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-deal-scroll]'));
+  const updateDealButtons = () =>
+    buttons.forEach((button) => {
+      button.disabled =
+        Number(button.dataset.dealScroll) < 0
+          ? dealTrack.scrollLeft < 2
+          : dealTrack.scrollLeft + dealTrack.clientWidth >= dealTrack.scrollWidth - 2;
+    });
+  buttons.forEach((button) =>
+    button.addEventListener('click', () =>
+      dealTrack.scrollBy({
+        left:
+          Number(button.dataset.dealScroll) *
+          (dealTrack.querySelector<HTMLElement>('.deal-card')!.offsetWidth +
+            parseFloat(getComputedStyle(dealTrack).columnGap)),
+        behavior: reducedMotion.matches ? 'instant' : 'smooth',
+      }),
+    ),
+  );
+  dealTrack.addEventListener('scroll', updateDealButtons, { passive: true });
+  new ResizeObserver(updateDealButtons).observe(dealTrack);
+  updateDealButtons();
+}

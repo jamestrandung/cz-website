@@ -4,7 +4,7 @@ test('catalog renders without overflow and contains every imported item', async 
   const errors: string[] = [];
   page.on('pageerror', (err) => errors.push(err.message));
   await page.goto('/');
-  await expect(page.locator('.product-list [data-product]')).toHaveCount(48);
+  await expect(page.locator('.product-list [data-product]')).toHaveCount(50);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await expect(page.locator('h1')).toContainText('Đúng gu bạn');
   expect(errors).toEqual([]);
@@ -134,7 +134,7 @@ test('core Vietnamese menu is readable without JavaScript', async ({ browser }) 
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   await page.goto('http://localhost:4321');
-  await expect(page.locator('.product-list [data-product]')).toHaveCount(48);
+  await expect(page.locator('.product-list [data-product]')).toHaveCount(50);
   await expect(page.locator('[data-category="tea"]')).toHaveAttribute('href', '#tea');
   await context.close();
 });

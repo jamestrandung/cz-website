@@ -124,9 +124,13 @@
         "vi": "Minh hoạ bạc xỉu",
         "en": "Illustration of white coffee"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -193,9 +197,13 @@
         "vi": "Minh hoạ phin cam",
         "en": "Illustration of orange coffee"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -237,7 +245,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -292,7 +302,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -347,7 +359,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -402,7 +416,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -441,9 +457,13 @@
         "vi": "Minh hoạ matcha khoai môn",
         "en": "Illustration of taro matcha"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -484,7 +504,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -525,7 +547,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -564,9 +588,13 @@
         "vi": "Minh hoạ cà phê muối huế",
         "en": "Illustration of huế salted coffee"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -605,9 +633,13 @@
         "vi": "Minh hoạ trà bưởi aiyu",
         "en": "Illustration of pomelo aiyu tea"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -617,7 +649,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -749,7 +783,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -803,7 +839,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -813,7 +851,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -945,7 +985,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -955,7 +997,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -1085,9 +1129,13 @@
         "vi": "Minh hoạ thanh trà mật ong hạt đác",
         "en": "Illustration of honey & palm seed chrysanthemum tea"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -1128,7 +1176,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG1"],
+      "sourceCodes": [
+        "TG1"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -1138,7 +1188,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -1268,9 +1320,13 @@
         "vi": "Minh hoạ trà sữa khoai môn",
         "en": "Illustration of taro oolong milk tea"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
-      "sourceCodes": ["TG1"],
+      "sourceCodes": [
+        "TG1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -1311,7 +1367,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG1"],
+      "sourceCodes": [
+        "TG1"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -1321,7 +1379,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -1451,9 +1511,13 @@
         "vi": "Minh hoạ trà sữa ô long",
         "en": "Illustration of oolong milk tea"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
-      "sourceCodes": ["TG1"],
+      "sourceCodes": [
+        "TG1"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -1463,7 +1527,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -1595,7 +1661,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG1"],
+      "sourceCodes": [
+        "TG1"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -1605,7 +1673,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -1737,7 +1807,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -1783,7 +1855,9 @@
                 "en": "Free oat milk swap"
               },
               "groupId": "milk",
-              "choiceIds": ["oat"],
+              "choiceIds": [
+                "oat"
+              ],
               "quantity": 1
             }
           ]
@@ -1810,9 +1884,13 @@
         "vi": "Minh hoạ matcha coco kem mây",
         "en": "Illustration of matcha coconut cloud"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -1853,7 +1931,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -1899,7 +1979,9 @@
                 "en": "Free oat milk swap"
               },
               "groupId": "milk",
-              "choiceIds": ["oat"],
+              "choiceIds": [
+                "oat"
+              ],
               "quantity": 1
             }
           ]
@@ -1926,9 +2008,13 @@
         "vi": "Minh hoạ matcha latte",
         "en": "Illustration of matcha latte"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -1974,7 +2060,9 @@
                 "en": "Free oat milk swap"
               },
               "groupId": "milk",
-              "choiceIds": ["oat"],
+              "choiceIds": [
+                "oat"
+              ],
               "quantity": 1
             }
           ]
@@ -1999,7 +2087,9 @@
                 "en": "Free oat milk swap"
               },
               "groupId": "milk",
-              "choiceIds": ["oat"],
+              "choiceIds": [
+                "oat"
+              ],
               "quantity": 1
             }
           ]
@@ -2028,7 +2118,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST2"],
+      "sourceCodes": [
+        "ST2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -2069,7 +2161,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["ST1"],
+      "sourceCodes": [
+        "ST1"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -2115,7 +2209,9 @@
                 "en": "Free oat milk swap"
               },
               "groupId": "milk",
-              "choiceIds": ["oat"],
+              "choiceIds": [
+                "oat"
+              ],
               "quantity": 1
             }
           ]
@@ -2140,7 +2236,9 @@
                 "en": "Free oat milk swap"
               },
               "groupId": "milk",
-              "choiceIds": ["oat"],
+              "choiceIds": [
+                "oat"
+              ],
               "quantity": 1
             }
           ]
@@ -2169,7 +2267,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -2223,7 +2323,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -2262,9 +2364,13 @@
         "vi": "Minh hoạ trà chanh atiso",
         "en": "Illustration of Atiso lemon tea"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [
         {
@@ -2274,7 +2380,9 @@
             "en": "Complimentary toppings · Size M"
           },
           "kind": "included",
-          "variantIds": ["m"],
+          "variantIds": [
+            "m"
+          ],
           "minSelections": 0,
           "choices": [
             {
@@ -2406,7 +2514,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG2"],
+      "sourceCodes": [
+        "TG2"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -2460,7 +2570,9 @@
       },
       "badges": [],
       "availability": "available",
-      "sourceCodes": ["TG1"],
+      "sourceCodes": [
+        "TG1"
+      ],
       "aliases": [],
       "optionGroups": [],
       "variants": [
@@ -2499,7 +2611,9 @@
         "vi": "Minh hoạ xúc xích đức & khoai",
         "en": "Illustration of german sausage & potato wedges"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
       "sourceCodes": [],
       "aliases": [],
@@ -2637,7 +2751,9 @@
         "vi": "Minh hoạ sừng trâu chấm sữa",
         "en": "Illustration of croissant with sweet dipping sauce"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
       "sourceCodes": [],
       "aliases": [],
@@ -2648,6 +2764,63 @@
           "label": {
             "vi": "Một phần",
             "en": "One serving"
+          },
+          "price": 45000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ]
+    },
+    {
+      "id": "garlic-eggs",
+      "categoryId": "food",
+      "name": {
+        "vi": "Ốp la bơ tỏi",
+        "en": "Fried eggs & garlic bread"
+      },
+      "summary": {
+        "vi": "Trứng ốp la ăn kèm bánh mì bơ tỏi.",
+        "en": "Fried eggs with garlic butter bread."
+      },
+      "description": {
+        "vi": "Trứng ốp la ăn kèm bánh mì bơ tỏi nóng giòn. Có thể thêm xúc xích.",
+        "en": "Fried eggs served with warm, crisp garlic butter bread. Add sausage if you like."
+      },
+      "badges": [],
+      "availability": "available",
+      "aliases": [
+        "op la",
+        "eggs"
+      ],
+      "sourceCodes": [],
+      "optionGroups": [
+        {
+          "id": "extras",
+          "label": {
+            "vi": "Thêm món",
+            "en": "Add-ons"
+          },
+          "kind": "add-on",
+          "minSelections": 0,
+          "choices": [
+            {
+              "id": "sausage",
+              "label": {
+                "vi": "Xúc xích · mỗi cây",
+                "en": "Sausage · each"
+              },
+              "priceDelta": 10000
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One portion"
           },
           "price": 45000,
           "availability": "available",
@@ -2743,7 +2916,9 @@
         "vi": "Minh hoạ tiramisu",
         "en": "Illustration of tiramisu"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
       "sourceCodes": [],
       "aliases": [],
@@ -2821,7 +2996,9 @@
         "vi": "Minh hoạ khoai tây chiên không dầu",
         "en": "Illustration of air-fried potato wedges"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
       "sourceCodes": [],
       "aliases": [],
@@ -2873,13 +3050,53 @@
             "vi": "Một phần",
             "en": "One serving"
           },
-          "price": 35000,
+          "price": 40000,
           "availability": "available",
           "attributes": {},
           "benefits": []
         }
       ],
       "preparationMinutes": 15
+    },
+    {
+      "id": "butter-floss-bread",
+      "categoryId": "sweet",
+      "name": {
+        "vi": "Bánh mì bơ chà bông",
+        "en": "Butter bread with chicken floss"
+      },
+      "summary": {
+        "vi": "Bánh mì bơ thơm, phủ chà bông.",
+        "en": "Buttery bread topped with chicken floss."
+      },
+      "description": {
+        "vi": "Bánh mì bơ ăn cùng chà bông.",
+        "en": "Buttery bread served with chicken floss."
+      },
+      "badges": [],
+      "availability": "available",
+      "aliases": [
+        "banh mi bo cha bong"
+      ],
+      "sourceCodes": [],
+      "optionGroups": [],
+      "variants": [
+        {
+          "id": "portion",
+          "label": {
+            "vi": "Một phần",
+            "en": "One portion"
+          },
+          "price": 40000,
+          "availability": "available",
+          "attributes": {},
+          "benefits": []
+        }
+      ],
+      "imageAlt": {
+        "vi": "Bánh mì bơ chà bông",
+        "en": "Butter bread with chicken floss"
+      }
     },
     {
       "id": "chicken-jerky",
@@ -2940,7 +3157,9 @@
         "vi": "Minh hoạ trân châu đen",
         "en": "Illustration of black pearls"
       },
-      "badges": ["bestseller"],
+      "badges": [
+        "bestseller"
+      ],
       "availability": "available",
       "sourceCodes": [],
       "aliases": [],
@@ -3096,7 +3315,9 @@
         "vi": "Minh hoạ trân châu trắng",
         "en": "Illustration of white pearls"
       },
-      "badges": ["must-try"],
+      "badges": [
+        "must-try"
+      ],
       "availability": "available",
       "sourceCodes": [],
       "aliases": [],

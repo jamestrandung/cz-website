@@ -1,10 +1,12 @@
 # Cà Zone online menu — proposed delivery plan
 
+> Archived planning/source record. Retained for context; it may describe superseded proposals, prices, counts, or behavior. Use [current architecture](../docs/ARCHITECTURE.md) and [current pricing rules](../docs/PRICING_RULES.md) for maintenance. Do not use this record as current implementation instructions.
+
 Date: 12 September 2026  
 Status: Local prototype includes the complete PDF menu and 26 products with optimized photos; ordering-channel links and launch preparation remain.  
-Source: `ca-zone-online-menu-codex-brief.md`
+Source: `20260912-online-menu-original-brief.md`
 
-The brief defines the intended product. This plan proposes how to deliver it; proposed interaction details and acceptance targets below are not additional confirmed requirements. At planning time the workspace contained only the brief. The local Astro prototype now uses the supplied brand direction and logo, plus the complete imported PDF menu with optimized photos and branded placeholders for missing photos. See `README.md` and `docs/menu-reference.md` for implementation and source details.
+The brief defines the intended product. This plan proposes how to deliver it; proposed interaction details and acceptance targets below are not additional confirmed requirements. At planning time the workspace contained only the brief. The local Astro prototype now uses the supplied brand direction and logo, plus the complete imported PDF menu with optimized photos and branded placeholders for missing photos. See `README.md` and `20260913-menu-import-review.md` for implementation and source details.
 
 Confirmed scope update: run and review locally first. Domain purchase and Cloudflare configuration are deferred until the user is ready to set them up together. The deployment stages below remain future work.
 

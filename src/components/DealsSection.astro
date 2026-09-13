@@ -1,0 +1,82 @@
+---
+import { campaigns, dealsSection } from '../data/combos';
+import { menu } from '../data/menu';
+import { formatPrice } from '../domain/presentation';
+import { thumbnailSet } from '../domain/images';
+import Localized from './Localized.astro';
+import Icon from './Icon.astro';
+const active = campaigns.filter((c) => c.active);
+---
+
+{dealsSection.enabled && active.length > 0 && (
+  <section class="deals-section shell" aria-labelledby="deals-title" id="deals">
+    <div class="deals-heading">
+      <div>
+        <p class="eyebrow">
+          <Localized value={dealsSection.eyebrow} />
+        </p>
+        <h2 id="deals-title">
+          <Localized value={dealsSection.title} />
+        </h2>
+        <p>
+          <Localized value={dealsSection.description} />
+        </p>
+      </div>
+      <div class="deals-controls">
+        <button type="button" data-deal-scroll="-1" aria-label="Trước / Previous">
+          <span aria-hidden="true">←</span>
+        </button>
+        <button type="button" data-deal-scroll="1" aria-label="Tiếp / Next">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+    <div class="deals-track" tabindex="0" aria-label="Combos & ưu đãi / Deals">
+      {active.map((c, index) => (
+        <button
+          type="button"
+          class:list={['deal-card', `deal-${c.theme}`]}
+          data-combo={c.id}
+          aria-haspopup="dialog"
+        >
+          <span class="deal-card-top">
+            <span>COMBO {String(index + 1).padStart(2, '0')}</span>
+            <Icon name="arrow" size={19} />
+          </span>
+          <strong class="deal-title">
+            <Localized value={c.title} />
+          </strong>
+          <span class="deal-summary">
+            <Localized value={c.description} />
+          </span>
+          <span class="deal-art" aria-hidden="true">
+            {c.imageProductIds.map((id) => {
+              const p = menu.products.find((p) => p.id === id)!;
+              return (
+                <img
+                  src={p.image}
+                  srcset={thumbnailSet(p)}
+                  sizes="150px"
+                  width="240"
+                  height="240"
+                  alt=""
+                  loading="lazy"
+                />
+              );
+            })}
+            {c.imageProductIds.length > 1 && <span class="deal-plus">+</span>}
+          </span>
+          <span class="deal-footer">
+            <span>
+              <Localized value={{ vi: 'Từ', en: 'From' }} />{' '}
+              <strong>{formatPrice(Math.min(...c.offers.map((o) => o.price)))}</strong>
+            </span>
+            <span>
+              <Localized value={{ vi: 'Xem món đi kèm', en: 'Explore the combo' }} /> ↗
+            </span>
+          </span>
+        </button>
+      ))}
+    </div>
+  </section>
+)}

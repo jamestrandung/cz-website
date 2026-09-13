@@ -141,8 +141,8 @@ export async function preparePhotos({
     if (/^[a-z0-9-]+-\d+-\d{3,4}-[a-f0-9]{10}\.webp$/.test(filename) && !live.has(filename))
       await fs.unlink(path.join(outputDir, filename));
   }
-  await fs.mkdir(path.join(projectRoot, 'docs'), { recursive: true });
-  await writeJson(path.join(projectRoot, 'docs/photo-size-report.json'), report);
+  await fs.mkdir(path.join(projectRoot, 'tmp/reports'), { recursive: true });
+  await writeJson(path.join(projectRoot, 'tmp/reports/photo-size-report.json'), report);
   return report;
 }
 

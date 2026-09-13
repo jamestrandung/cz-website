@@ -1,5 +1,9 @@
 # Product photo integration
 
+> Archived planning/source record. Retained for context; it may describe superseded proposals, prices, counts, or behavior. Use [current architecture](../docs/ARCHITECTURE.md) and [current pricing rules](../docs/PRICING_RULES.md) for maintenance. Do not use this record as current implementation instructions.
+
+September 13 combo draft update: added optimized photos for `garlic-eggs` (Ốp la bơ tỏi) and `butter-floss-bread` (Bánh mì bơ chà bông). Current coverage is 28 products, 30 photo views, and 120 responsive WebP assets. The original coverage table below describes the initial import.
+
 Completed 2026-09-13. Source: `/Users/james.tran/Downloads/Ca Zone/Pictures/Food/CAZONE-JPG`.
 
 ## Included content
@@ -29,7 +33,7 @@ Selected originals: 88.1 MiB. All 112 generated files: 3.64 MiB. These are store
 | 800px | 27.9–53.2 KiB | 1047.8 KiB |
 | 1200px | 54.2–107.1 KiB | 2037.8 KiB |
 
-Detailed machine-readable sizes: `photo-size-report.json`.
+The original run report is not maintained with this archive. Current run diagnostics are written to `tmp/reports/photo-size-report.json`; its scope may differ from the historical measurements above.
 
 ## Source mapping
 

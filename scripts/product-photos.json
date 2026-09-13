@@ -1,42 +1,176 @@
 {
-  "bac-xiu": [{ "source": "bạc xỉu.jpg" }],
-  "phin-cam": [{ "source": "phin cam.jpg" }],
-  "phin-sua": [{ "source": "phin sữa đá.jpg" }],
-  "phin-den": [{ "source": "phin đen đá.jpg" }],
-  "phin-cano": [{ "source": "phin cano.jpg" }],
-  "cacao-muoi": [{ "source": "cacao muối huế.jpg" }],
-  "ca-phe-muoi": [{ "source": "cà phê muối huế.jpg" }],
-  "tra-buoi": [{ "source": "Trà bưởi aiyu.jpg" }],
-  "tra-chanh-day": [{ "source": "Trà chanh dây tăc xí muội.jpg" }],
-  "thanh-tra-mat-ong": [{ "source": "Thanh trà hạt đác.jpg" }],
-  "tra-sua-hanh-nhan": [{ "source": "Trà sữa milkfoam hạnh nhân nướng.jpg" }],
-  "tra-sua-olong": [{ "source": "trà sữa ô long.jpg" }],
-  "tra-nhai-macchiato": [{ "source": "Trà lài macchiato.jpg" }],
+  "bac-xiu": [
+    {
+      "source": "bạc xỉu.jpg"
+    }
+  ],
+  "phin-cam": [
+    {
+      "source": "phin cam.jpg"
+    }
+  ],
+  "phin-sua": [
+    {
+      "source": "phin sữa đá.jpg"
+    }
+  ],
+  "phin-den": [
+    {
+      "source": "phin đen đá.jpg"
+    }
+  ],
+  "phin-cano": [
+    {
+      "source": "phin cano.jpg"
+    }
+  ],
+  "cacao-muoi": [
+    {
+      "source": "cacao muối huế.jpg"
+    }
+  ],
+  "ca-phe-muoi": [
+    {
+      "source": "cà phê muối huế.jpg"
+    }
+  ],
+  "tra-buoi": [
+    {
+      "source": "Trà bưởi aiyu.jpg"
+    }
+  ],
+  "tra-chanh-day": [
+    {
+      "source": "Trà chanh dây tăc xí muội.jpg"
+    }
+  ],
+  "thanh-tra-mat-ong": [
+    {
+      "source": "Thanh trà hạt đác.jpg"
+    }
+  ],
+  "tra-sua-hanh-nhan": [
+    {
+      "source": "Trà sữa milkfoam hạnh nhân nướng.jpg"
+    }
+  ],
+  "tra-sua-olong": [
+    {
+      "source": "trà sữa ô long.jpg"
+    }
+  ],
+  "tra-nhai-macchiato": [
+    {
+      "source": "Trà lài macchiato.jpg"
+    }
+  ],
   "matcha-latte": [
-    { "source": "matcha latte.jpg", "variantIds": ["cold"], "label": { "vi": "Đá", "en": "Iced" } },
+    {
+      "source": "matcha latte.jpg",
+      "variantIds": [
+        "cold"
+      ],
+      "label": {
+        "vi": "Đá",
+        "en": "Iced"
+      }
+    },
     {
       "source": "matcha latte nóng.jpg",
-      "variantIds": ["hot"],
-      "label": { "vi": "Nóng", "en": "Hot" }
+      "variantIds": [
+        "hot"
+      ],
+      "label": {
+        "vi": "Nóng",
+        "en": "Hot"
+      }
     }
   ],
   "cacao-sua": [
-    { "source": "cacao sữa đá.jpg", "variantIds": ["cold"], "label": { "vi": "Đá", "en": "Iced" } },
+    {
+      "source": "cacao sữa đá.jpg",
+      "variantIds": [
+        "cold"
+      ],
+      "label": {
+        "vi": "Đá",
+        "en": "Iced"
+      }
+    },
     {
       "source": "Cacao sữa nóng.jpg",
-      "variantIds": ["hot"],
-      "label": { "vi": "Nóng", "en": "Hot" }
+      "variantIds": [
+        "hot"
+      ],
+      "label": {
+        "vi": "Nóng",
+        "en": "Hot"
+      }
     }
   ],
-  "tra-duong-nhan": [{ "source": "Bình trà dưỡng nhan.jpg" }],
-  "cam-ep": [{ "source": "Cam ép.jpg" }],
-  "da-me": [{ "source": "Đá me.jpg" }],
-  "sausage": [{ "source": "Xúc xích khoai chiên.jpg" }],
-  "croissant-floss": [{ "source": "Sừng trâu chà bông.jpg" }],
-  "croissant-almond": [{ "source": "Sừng trâu hạnh nhân.jpg" }],
-  "croissant-milk": [{ "source": "Sừng trâu chấm sữa.jpg" }],
-  "cup-noodles": [{ "source": "Mì ly.jpg" }],
-  "potato-wedges": [{ "source": "Khoai tây chiên.jpg" }],
-  "croffle": [{ "source": "Croffle caramel.jpg" }],
-  "chicken-jerky": [{ "source": "Khô gà lá chanh.jpg" }]
+  "tra-duong-nhan": [
+    {
+      "source": "Bình trà dưỡng nhan.jpg"
+    }
+  ],
+  "cam-ep": [
+    {
+      "source": "Cam ép.jpg"
+    }
+  ],
+  "da-me": [
+    {
+      "source": "Đá me.jpg"
+    }
+  ],
+  "sausage": [
+    {
+      "source": "Xúc xích khoai chiên.jpg"
+    }
+  ],
+  "croissant-floss": [
+    {
+      "source": "Sừng trâu chà bông.jpg"
+    }
+  ],
+  "croissant-almond": [
+    {
+      "source": "Sừng trâu hạnh nhân.jpg"
+    }
+  ],
+  "croissant-milk": [
+    {
+      "source": "Sừng trâu chấm sữa.jpg"
+    }
+  ],
+  "cup-noodles": [
+    {
+      "source": "Mì ly.jpg"
+    }
+  ],
+  "potato-wedges": [
+    {
+      "source": "Khoai tây chiên.jpg"
+    }
+  ],
+  "croffle": [
+    {
+      "source": "Croffle caramel.jpg"
+    }
+  ],
+  "chicken-jerky": [
+    {
+      "source": "Khô gà lá chanh.jpg"
+    }
+  ],
+  "garlic-eggs": [
+    {
+      "source": "ốp la bơ tỏi.png"
+    }
+  ],
+  "butter-floss-bread": [
+    {
+      "source": "bánh mì bơ chà bông.png"
+    }
+  ]
 }

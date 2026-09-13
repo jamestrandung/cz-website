@@ -210,7 +210,9 @@
         "vi": "Đá",
         "en": "Iced"
       },
-      "variantIds": ["cold"],
+      "variantIds": [
+        "cold"
+      ],
       "focalPoint": "50% 50%"
     },
     {
@@ -228,7 +230,9 @@
         "vi": "Nóng",
         "en": "Hot"
       },
-      "variantIds": ["hot"],
+      "variantIds": [
+        "hot"
+      ],
       "focalPoint": "50% 50%"
     }
   ],
@@ -248,7 +252,9 @@
         "vi": "Đá",
         "en": "Iced"
       },
-      "variantIds": ["cold"],
+      "variantIds": [
+        "cold"
+      ],
       "focalPoint": "50% 50%"
     },
     {
@@ -266,7 +272,9 @@
         "vi": "Nóng",
         "en": "Hot"
       },
-      "variantIds": ["hot"],
+      "variantIds": [
+        "hot"
+      ],
       "focalPoint": "50% 50%"
     }
   ],
@@ -431,6 +439,36 @@
       "alt": {
         "vi": "Khô gà lá chanh",
         "en": "Lime leaf chicken jerky"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "garlic-eggs": [
+    {
+      "sources": {
+        "240": "/images/products/garlic-eggs-0-240-551c31eb4c.webp",
+        "480": "/images/products/garlic-eggs-0-480-284b2a5e4d.webp",
+        "800": "/images/products/garlic-eggs-0-800-812a4dd8e1.webp",
+        "1200": "/images/products/garlic-eggs-0-1200-820fdbd6b9.webp"
+      },
+      "alt": {
+        "vi": "Ốp la bơ tỏi",
+        "en": "Fried eggs & garlic bread"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "butter-floss-bread": [
+    {
+      "sources": {
+        "240": "/images/products/butter-floss-bread-0-240-571771d64b.webp",
+        "480": "/images/products/butter-floss-bread-0-480-a6fd9f66ee.webp",
+        "800": "/images/products/butter-floss-bread-0-800-a34d2e79a0.webp",
+        "1200": "/images/products/butter-floss-bread-0-1200-3b3da3dd89.webp"
+      },
+      "alt": {
+        "vi": "Bánh mì bơ chà bông",
+        "en": "Butter bread with chicken floss"
       },
       "focalPoint": "50% 50%"
     }

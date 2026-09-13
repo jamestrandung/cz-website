@@ -1,5 +1,7 @@
 # Maintaining categories and dishes
 
+Combo membership is maintained separately in [the combo guide](combos-guide.md). When removing a dish, also remove its combo choices, food-group entries, and promotional image references. Run `npm run menu:check` to catch stale references.
+
 This is the everyday editing guide. The menu is stored in local files; there is no admin website or database to log into. A “dish” below means any drink, food item, or topping.
 
 Related guides: [Discovery banner](discovery-guide.md) · [Photo tools](image-workflow.md).

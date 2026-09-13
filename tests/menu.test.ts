@@ -108,16 +108,16 @@ test('all prototype images and Discovery destinations exist', () => {
   for (const id of discovery.featuredProductIds) assert.ok(menu.products.some((p) => p.id === id));
 });
 
-test('complete PDF import contains 48 items, 66 variants, and nine original groups', () => {
+test('complete PDF import contains 50 items, 68 variants, and nine original groups', () => {
   assert.equal(menu.contentStatus, 'pdf-imported');
-  assert.equal(menu.products.length, 48);
+  assert.equal(menu.products.length, 50);
   assert.equal(
     menu.products.reduce((n, p) => n + p.variants.length, 0),
-    66,
+    68,
   );
   assert.deepEqual(
     menu.categories.map((c) => menu.products.filter((p) => p.categoryId === c.id).length),
-    [5, 5, 5, 5, 6, 5, 5, 5, 7],
+    [5, 5, 5, 5, 6, 5, 6, 6, 7],
   );
   assert.ok(
     menu.products.every(
@@ -198,10 +198,10 @@ test('provided location and Facebook links are wired separately from ordering ch
 
 test('photo import covers only the current mapped products and supplies every responsive asset', () => {
   const withPhotos = menu.products.filter((p) => p.photos.length);
-  assert.equal(withPhotos.length, 26);
+  assert.equal(withPhotos.length, 28);
   assert.equal(
     withPhotos.reduce((n, p) => n + p.photos.length, 0),
-    28,
+    30,
   );
   for (const p of menu.products) {
     if (!p.photos.length) assert.match(p.image, /^\/images\/placeholders\//);

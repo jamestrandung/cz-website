@@ -60,7 +60,7 @@ export const productSchema = z.object({
         price: money,
         availability,
         attributes: z.object({
-          size: z.enum(['S', 'M']).optional(),
+          size: z.string().min(1).optional(),
           temperature: z.enum(['hot', 'cold']).optional(),
         }),
         benefits: z

@@ -8,6 +8,9 @@ import Localized from '../components/Localized.astro';
 import Icon from '../components/Icon.astro';
 import ProductRow from '../components/ProductRow.astro';
 import '../styles/global.css';
+import '../styles/combos.css';
+import DealsSection from '../components/DealsSection.astro';
+import { campaigns } from '../data/combos';
 const menu = loadMenu();
 const featured = discovery.featuredProductIds.map((id) => menu.products.find((p) => p.id === id)!);
 if (!menu.categories.some((c) => c.id === discovery.targetCategory) || featured.some((p) => !p))
@@ -122,6 +125,7 @@ if (!menu.categories.some((c) => c.id === discovery.targetCategory) || featured.
         </section>
       )}
 
+      <DealsSection />
       <nav class="category-nav" aria-label="Menu categories / Danh mục">
         <div class="nav-inner shell">
           <div class="category-track">
@@ -191,7 +195,7 @@ if (!menu.categories.some((c) => c.id === discovery.targetCategory) || featured.
             </div>
             <div class="product-list">
               {categoryProducts(menu, category.id).map((product) => (
-                <ProductRow product={product} />
+                <ProductRow product={product} campaigns={campaigns} />
               ))}
             </div>
           </section>
@@ -324,6 +328,12 @@ if (!menu.categories.some((c) => c.id === discovery.targetCategory) || featured.
       id="menu-data"
       type="application/json"
       set:html={JSON.stringify(menu).replace(/</g, '\\u003c')}
+    ></script>
+    <script
+      is:inline
+      id="combo-data"
+      type="application/json"
+      set:html={JSON.stringify(campaigns).replace(/</g, '\\u003c')}
     ></script>
     <script>
       import '../scripts/menu';

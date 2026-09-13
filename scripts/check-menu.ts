@@ -7,6 +7,10 @@ try {
   const { loadMenu } = await import('../src/content/loadMenu');
   const { discovery } = await import('../src/data/menu');
   const menu = loadMenu();
+  const { campaigns } = await import('../src/data/combos');
+  console.log(
+    `Combos OK: ${campaigns.length} campaigns; product references and variant pricing validated.`,
+  );
   const fail = (message: string) => {
     throw new Error(message);
   };

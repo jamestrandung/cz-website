@@ -1,4 +1,8 @@
 ---
+import type { Campaign } from '../domain/combos';
+import { memberships } from '../domain/combos';
+import { menu } from '../data/menu';
+import { ticketIcon } from './ticketIcon';
 import type { Product } from '../domain/menu';
 import { priceLabel, isAvailable } from '../domain/menu';
 import { ui } from '../i18n/ui';
@@ -8,8 +12,10 @@ import { badgeIcon } from './badgeIcon';
 import { thumbnailSet } from '../domain/images';
 interface Props {
   product: Product;
+  campaigns?: Campaign[];
 }
-const { product: p } = Astro.props;
+const { product: p, campaigns = [] } = Astro.props;
+const comboCount = memberships(menu, campaigns, p).length;
 ---
 
 <button
@@ -52,6 +58,17 @@ const { product: p } = Astro.props;
         )
       )}
     </span>
+    {comboCount > 0 && (
+      <span class="combo-product-note">
+        <Fragment set:html={ticketIcon} />
+        <Localized
+          value={{
+            vi: `Có trong ${comboCount} combo`,
+            en: `In ${comboCount} ${comboCount === 1 ? 'combo' : 'combos'}`,
+          }}
+        />
+      </span>
+    )}
   </span>
   <span class="product-open">
     <Icon name="arrow" size={18} />

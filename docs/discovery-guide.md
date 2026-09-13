@@ -1,5 +1,7 @@
 # Updating Discovery
 
+The horizontal Deals/Combos slider below Discovery is a separate section. See [the combo guide](combos-guide.md) to edit it; changing Discovery does not change combos.
+
 Discovery is the large yellow banner at the top of the menu. It has an eyebrow, headline, description, button, decorative stamp, and up to two featured product photos.
 
 Open `src/data/menu.ts` and edit **only the `export const discovery = { ... }` block**. This is TypeScript, not JSON: use `t('Vietnamese', 'English')` for localized copy. Keep the surrounding menu adapter, store locations and outbound links intact.

@@ -3,7 +3,7 @@ import sourceMenu from './products.json';
 import photoAssets from './photo-assets.json';
 import type { Product } from '../domain/menu';
 
-// Transcribed from Menu - A3.pdf. See docs/menu-reference.md for review notes.
+// Menu data and owner corrections: see docs/PRICING_RULES.md and docs/CURRENT_PRICING.md.
 const photosByProduct: Record<string, Product['photos']> = photoAssets;
 for (const id of Object.keys(photosByProduct)) {
   if (!sourceMenu.products.some((p) => p.id === id))

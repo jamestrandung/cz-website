@@ -34,6 +34,12 @@ test('full, selective, dry-run, invalid-input and removal workflows preserve unr
     await preparePhotos({ ...args, dryRun: true });
     await assert.rejects(fs.access(path.join(root, 'src/data/photo-assets.json')));
     await preparePhotos(args);
+    const report = JSON.parse(
+      await fs.readFile(path.join(root, 'tmp/reports/photo-size-report.json'), 'utf8'),
+    );
+    assert.equal(report.scope, 'all');
+    assert.equal(report.photos, 2);
+    await assert.rejects(fs.access(path.join(root, 'docs')));
     const read = async () =>
       JSON.parse(await fs.readFile(path.join(root, 'src/data/photo-assets.json'), 'utf8'));
     const before = await read();
