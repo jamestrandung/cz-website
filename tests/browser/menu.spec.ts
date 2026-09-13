@@ -5,7 +5,9 @@ test('catalog renders without overflow and contains every imported item', async 
   page.on('pageerror', (err) => errors.push(err.message));
   await page.goto('/');
   await expect(page.locator('.product-list [data-product]')).toHaveCount(50);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth <= visualViewport!.width),
+  ).toBe(true);
   await expect(page.locator('h1')).toContainText('Đúng gu bạn');
   expect(errors).toEqual([]);
 });
@@ -128,7 +130,9 @@ test('320px layout remains readable and storage failure does not break the menu'
   await page.goto('/');
   await page.locator('.header-controls [data-locale="en"]').click();
   await expect(page.locator('h1')).toContainText('Your kind of sip');
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth <= visualViewport!.width),
+  ).toBe(true);
   await page.locator('[data-search]').click();
   await page.locator('#search-input').fill('matcha');
   await expect(page.locator('#search-results [data-product="matcha-latte"]')).toBeVisible();

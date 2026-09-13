@@ -47,6 +47,9 @@
   width: auto;
   vertical-align: -0.18em;
 }
+.ca-mark-word {
+  position: relative;
+}
 body {
   margin: 0;
 }

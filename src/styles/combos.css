@@ -230,7 +230,8 @@
   font-size: 11px;
 }
 .combo-body {
-  padding: 24px 30px 32px;
+  --combo-inset: 30px;
+  padding: 24px var(--combo-inset) 32px;
 }
 .combo-offers {
   display: grid;
@@ -313,11 +314,17 @@
 .combo-item small.benefit {
   color: #526238;
 }
+/* The originating product is a full-width stripe: it bleeds through the body's side
+   padding and replaces the separators above and below, keeping its content aligned. */
 .combo-item-highlight {
+  width: calc(100% + 2 * var(--combo-inset));
+  margin-inline: calc(-1 * var(--combo-inset));
+  padding-inline: var(--combo-inset);
   background: #fff1bd;
-  padding-inline: 8px;
-  border-radius: 4px;
-  border: 1px solid #e4d195;
+  border-bottom-color: transparent;
+}
+.combo-item:has(+ .combo-item-highlight) {
+  border-bottom-color: transparent;
 }
 .combo-item small.combo-item-origin {
   color: #745900;
@@ -378,7 +385,8 @@
     padding: 24px;
   }
   .combo-body {
-    padding: 20px 24px 30px;
+    --combo-inset: 24px;
+    padding: 20px var(--combo-inset) 30px;
   }
   .combo-detail-head h2 {
     font-size: 30px;

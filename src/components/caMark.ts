@@ -20,11 +20,15 @@ const caMarkSvg = `<svg class="ca-mark" viewBox="0 0 ${CA_MARK_WIDTH} ${CA_MARK_
 
 /**
  * Escapes copy and draws each [cà] marker as the logo mark. The mark is decorative,
- * so a visually hidden copy of the word keeps it in the accessible name.
+ * so a visually hidden copy of the word keeps it in the accessible name. The
+ * positioned .ca-mark-word wrapper contains that absolutely positioned copy, which
+ * would otherwise escape scroll containers (the deals slider) and widen the page.
  */
 export const caMarkHtml = (value: string) =>
   splitCaMark(value)
     .map((part, i) =>
-      i % 2 ? `<span class="sr-only">${escapeHtml(part)}</span>${caMarkSvg}` : escapeHtml(part),
+      i % 2
+        ? `<span class="ca-mark-word"><span class="sr-only">${escapeHtml(part)}</span>${caMarkSvg}</span>`
+        : escapeHtml(part),
     )
     .join('');

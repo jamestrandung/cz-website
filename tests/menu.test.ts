@@ -98,7 +98,7 @@ test('[cà] logo marker ignores case and composition, escapes copy, and is rejec
   assert.equal(caMarkHtml('a & b'), 'a &amp; b');
   assert.match(
     caMarkHtml('<b>[cà]</b>'),
-    /^&lt;b&gt;<span class="sr-only">cà<\/span><svg class="ca-mark"[^]*<\/svg>&lt;\/b&gt;$/,
+    /^&lt;b&gt;<span class="ca-mark-word"><span class="sr-only">cà<\/span><svg class="ca-mark"[^]*<\/svg><\/span>&lt;\/b&gt;$/,
   );
   const m = structuredClone(menu);
   m.products[0].description.vi = 'Thêm [cà] sữa';

@@ -28,7 +28,9 @@ test('slider sits between Discovery and catalog and scrolls', async ({ page }) =
   await expect
     .poll(() => page.locator('.deals-track').evaluate((e) => e.scrollLeft))
     .toBeGreaterThan(100);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth <= visualViewport!.width),
+  ).toBe(true);
 });
 test('combo choices preserve pricing, benefits, language and nested back navigation', async ({
   page,
