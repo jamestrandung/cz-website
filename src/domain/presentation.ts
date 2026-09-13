@@ -1,6 +1,35 @@
 import type { Localized, Menu, Product } from './menu';
 
 export const text = (vi: string, en: string): Localized => ({ vi, en });
+export const escapeHtml = (s: string) =>
+  s.replace(
+    /[&<>"']/g,
+    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!,
+  );
+
+// Marks where the "cà" logo mark (CaMark) should replace literal text, e.g.
+// "[Cà] đông [cà] phê". Case inside the brackets is kept only for the
+// plain-text fallback (stripCaMark) — the rendered mark itself has one fixed
+// look regardless of case.
+const CA_MARK = /\[(Cà|cà)\]/g;
+export const stripCaMark = (value: string) => value.replace(CA_MARK, '$1');
+export const renderCaMark = (
+  value: string,
+  escapeText: (s: string) => string,
+  markHtml: string,
+): string => {
+  let result = '';
+  let lastIndex = 0;
+  for (const match of value.matchAll(CA_MARK)) {
+    // The mark itself is aria-hidden (decorative), so pair it with a visually
+    // hidden copy of the real word for the accessible name.
+    result +=
+      escapeText(value.slice(lastIndex, match.index)) +
+      `<span class="sr-only">${escapeText(match[1])}</span>${markHtml}`;
+    lastIndex = match.index! + match[0].length;
+  }
+  return result + escapeText(value.slice(lastIndex));
+};
 export const isAvailable = (p: Product) =>
   p.availability === 'available' && p.variants.some((v) => v.availability === 'available');
 export const formatPrice = (amount: number) => `${new Intl.NumberFormat('vi-VN').format(amount)}đ`;

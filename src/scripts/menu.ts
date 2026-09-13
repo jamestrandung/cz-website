@@ -2,7 +2,13 @@ import { comboMarkup, productComboLinks, productComboNote } from './combo-view';
 import type { Campaign } from '../domain/combos';
 import { thumbnailSet, detailSet } from '../domain/images';
 import { badgeIcon } from '../components/badgeIcon';
-import { formatPrice, isAvailable, priceLabel, searchProducts } from '../domain/presentation';
+import {
+  escapeHtml,
+  formatPrice,
+  isAvailable,
+  priceLabel,
+  searchProducts,
+} from '../domain/presentation';
 import type { Locale, Menu, Product } from '../domain/menu';
 import { ui, type UiKey } from '../i18n/ui';
 
@@ -20,11 +26,7 @@ const closeButton = document.querySelector<HTMLButtonElement>('.dialog-close')!;
 const results = document.querySelector<HTMLElement>('#search-results')!;
 const feedback = document.querySelector<HTMLElement>('.search-feedback')!;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const escape = (s: string) =>
-  s.replace(
-    /[&<>"']/g,
-    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!,
-  );
+const escape = escapeHtml;
 const arrow =
   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
 let locale: Locale = document.documentElement.lang === 'en' ? 'en' : 'vi';
@@ -298,6 +300,10 @@ function applyLocale(next: Locale, preservePosition = false) {
   }
   document.querySelectorAll<HTMLElement>('[data-vi][data-en]').forEach((el) => {
     el.textContent = el.dataset[locale]!;
+  });
+  document.querySelectorAll<HTMLElement>('[data-vi-mark]').forEach((el) => {
+    if (locale === 'vi') el.innerHTML = el.dataset.viMark!;
+    else el.textContent = el.dataset.en!;
   });
   document.querySelectorAll<HTMLElement>('[data-label-vi]').forEach((el) => {
     el.setAttribute('aria-label', locale === 'vi' ? el.dataset.labelVi! : el.dataset.labelEn!);

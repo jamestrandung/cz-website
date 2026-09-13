@@ -117,7 +117,7 @@ export const campaigns = validateCampaigns(menu, [
   {
     id: 'ca-dong',
     active: true,
-    title: t('Cà đông cà phê', 'Better with company'),
+    title: t('[Cà] đông [cà] phê', 'Better with company'),
     description: t(
       'Rủ bạn tới Cà. Mỗi người một ly, cùng chia món ngon.',
       'Bring your people. A drink each, a snack to share.',

@@ -1,0 +1,9 @@
+---
+// Decorative box+wordmark glyph, not live text — callers must ensure "cà"
+// is conveyed by surrounding text or an aria-label on the wrapping element.
+// Path data lives in caMark.ts (shared with the plain-string HTML renderers).
+import { caMarkSvg, type CaMarkOptions } from './caMark';
+const svg = caMarkSvg(Astro.props as CaMarkOptions);
+---
+
+<Fragment set:html={svg} />
