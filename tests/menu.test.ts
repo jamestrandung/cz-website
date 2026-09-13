@@ -198,10 +198,10 @@ test('provided location and Facebook links are wired separately from ordering ch
 
 test('photo import covers only the current mapped products and supplies every responsive asset', () => {
   const withPhotos = menu.products.filter((p) => p.photos.length);
-  assert.equal(withPhotos.length, 28);
+  assert.equal(withPhotos.length, 30);
   assert.equal(
     withPhotos.reduce((n, p) => n + p.photos.length, 0),
-    30,
+    32,
   );
   for (const p of menu.products) {
     if (!p.photos.length) assert.match(p.image, /^\/images\/placeholders\//);

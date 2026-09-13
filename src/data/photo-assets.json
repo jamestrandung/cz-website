@@ -472,5 +472,35 @@
       },
       "focalPoint": "50% 50%"
     }
+  ],
+  "tiramisu": [
+    {
+      "sources": {
+        "240": "/images/products/tiramisu-0-240-f96eddc9b8.webp",
+        "480": "/images/products/tiramisu-0-480-d20ba1c47f.webp",
+        "800": "/images/products/tiramisu-0-800-c0daef9814.webp",
+        "1200": "/images/products/tiramisu-0-1200-7e8c005272.webp"
+      },
+      "alt": {
+        "vi": "Tiramisu",
+        "en": "Tiramisu"
+      },
+      "focalPoint": "50% 50%"
+    }
+  ],
+  "cheesecake": [
+    {
+      "sources": {
+        "240": "/images/products/cheesecake-0-240-e736bcb664.webp",
+        "480": "/images/products/cheesecake-0-480-2237e1fca7.webp",
+        "800": "/images/products/cheesecake-0-800-b1afb0ea2b.webp",
+        "1200": "/images/products/cheesecake-0-1200-46619e324e.webp"
+      },
+      "alt": {
+        "vi": "Bánh phô mai chanh dây",
+        "en": "Passion fruit cheesecake"
+      },
+      "focalPoint": "50% 50%"
+    }
   ]
 }
