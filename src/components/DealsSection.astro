@@ -3,6 +3,7 @@ import { campaigns, dealsSection } from '../data/combos';
 import { menu } from '../data/menu';
 import { formatPrice } from '../domain/presentation';
 import { thumbnailSet } from '../domain/images';
+import { ui } from '../i18n/ui';
 import Localized from './Localized.astro';
 import Icon from './Icon.astro';
 const active = campaigns.filter((c) => c.active);
@@ -23,15 +24,34 @@ const active = campaigns.filter((c) => c.active);
         </p>
       </div>
       <div class="deals-controls">
-        <button type="button" data-deal-scroll="-1" aria-label="Trước / Previous">
+        <button
+          type="button"
+          data-deal-scroll="-1"
+          aria-label={ui.previous.vi}
+          data-label-vi={ui.previous.vi}
+          data-label-en={ui.previous.en}
+        >
           <span aria-hidden="true">←</span>
         </button>
-        <button type="button" data-deal-scroll="1" aria-label="Tiếp / Next">
+        <button
+          type="button"
+          data-deal-scroll="1"
+          aria-label={ui.next.vi}
+          data-label-vi={ui.next.vi}
+          data-label-en={ui.next.en}
+        >
           <span aria-hidden="true">→</span>
         </button>
       </div>
     </div>
-    <div class="deals-track" tabindex="0" aria-label="Combos & ưu đãi / Deals">
+    <div
+      class="deals-track"
+      tabindex="0"
+      role="region"
+      aria-label={ui.dealsTrack.vi}
+      data-label-vi={ui.dealsTrack.vi}
+      data-label-en={ui.dealsTrack.en}
+    >
       {active.map((c, index) => (
         <button
           type="button"
@@ -68,11 +88,11 @@ const active = campaigns.filter((c) => c.active);
           </span>
           <span class="deal-footer">
             <span>
-              <Localized value={{ vi: 'Từ', en: 'From' }} />{' '}
+              <Localized value={ui.from} />{' '}
               <strong>{formatPrice(Math.min(...c.offers.map((o) => o.price)))}</strong>
             </span>
             <span>
-              <Localized value={{ vi: 'Xem món đi kèm', en: 'Explore the combo' }} /> ↗
+              <Localized value={ui.exploreCombo} /> ↗
             </span>
           </span>
         </button>

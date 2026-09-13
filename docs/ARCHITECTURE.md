@@ -51,7 +51,7 @@ Paths below are relative to the repository root.
 | `src/components/DealsSection.astro` | Slider cards, active campaigns, promotional photos, lowest offer base price |
 | `src/scripts/menu.ts` | Search, product/combo navigation, modal history, photo switching, localization, scroll/focus restoration, slider controls |
 | `src/scripts/combo-view.ts` | Browser-rendered combo choices, per-variant surcharges/benefits, product-to-combo links |
-| `src/i18n/ui.ts` and `Localized.astro` | Bilingual interface text and initial localized markup |
+| `src/i18n/ui.ts` and `Localized.astro` | All bilingual interface copy (including combo dialog, slider and ARIA labels, page title and meta description) and initial localized markup |
 | `src/components/caMark.ts` | "cà" logo mark SVG and HTML for copy containing the `[cà]` marker, shared by `Localized.astro` and `combo-view.ts` |
 | `src/styles/global.css`, `combos.css` | Brand tokens, responsive catalog/dialog/slider styles |
 | `scripts/product-photos.json` | Allowlist linking product IDs to original image filenames |
@@ -135,7 +135,7 @@ The Vietnamese catalog and slider cards are rendered into static HTML. `menu-dat
 
 One native dialog hosts search, product details, and combo details. History state records view/depth, product/campaign/offer IDs, originating product, scroll, focus target, and photo index. Opening another view pushes state; switching an offer replaces the current state. Back restores the parent, including the selected combo offer. A combo opened from a product marks that product's row as a full-width yellow stripe labelled "Món bạn đang xem" / "The item you were viewing". Closing or Escape returns through the overlay depth to the catalog and restores page scroll/focus. Catalog scrolling is locked while the dialog is open. A reload resets an overlay state to the catalog. `#deals` is a section anchor; there are no per-product/per-combo public URLs.
 
-VI/EN is stored locally when storage is available, with fallback when storage is blocked. Dynamic search/details/combos are rerendered on language change. Static text uses localized markup: plain copy stores both languages in `data-vi`/`data-en` and the toggle swaps `textContent`; copy with a `[cà]` marker renders both languages as `data-locale-only` spans and the toggle switches `hidden`, so the logo mark is never flattened to text. Search normalizes accents, whitespace, case and đ, then ranks matches in names/aliases above broader descriptions/categories. Search is not sorted by combo savings or by descending price.
+VI/EN is stored locally when storage is available, with fallback when storage is blocked. Dynamic search/details/combos are rerendered on language change. Static text uses localized markup: plain copy stores both languages in `data-vi`/`data-en` and the toggle swaps `textContent`; copy with a `[cà]` marker renders both languages as `data-locale-only` spans and the toggle switches `hidden`, so the logo mark is never flattened to text. Static ARIA labels use `data-label-vi`/`data-label-en`; only the language switch keeps a deliberately bilingual label. Interface strings inserted by browser renderers are escaped like content (`trHtml` in `menu.ts`, `tx` in `combo-view.ts`). Search normalizes accents, whitespace, case and đ, then ranks matches in names/aliases above broader descriptions/categories. Search is not sorted by combo savings or by descending price.
 
 The slider uses native horizontal scrolling and CSS snap, with arrow controls and reduced-motion support. It does not autoplay. Mobile shows a partial next card. Dialog details require JavaScript; the no-JavaScript guarantee is readability of the catalog, not interactive combo browsing.
 
@@ -162,7 +162,7 @@ Copy opts in with the `[cà]` marker; see [Combos guide](combos-guide.md#show-th
 
 Be Vietnam Pro is hosted locally for Vietnamese glyph support. Product photos come from the owner's allowlisted source images. Missing photos use category placeholders rather than invented product images.
 
-The image pipeline writes content-hashed WebP assets at 240/480/800/1200 pixels, updates `src/data/photo-assets.json`, and preserves originals. It matches macOS Unicode-normalized filenames and removes stale script-generated assets. Catalog, search, Discovery and combo cards use thumbnails; detail-sized assets are requested when opening a product. Current coverage: 28 products, 30 views, 120 responsive files.
+The image pipeline writes content-hashed WebP assets at 240/480/800/1200 pixels, updates `src/data/photo-assets.json`, and preserves originals. It matches macOS Unicode-normalized filenames and removes stale script-generated assets. Catalog, search, Discovery and combo cards use thumbnails; detail-sized assets are requested when opening a product. Current coverage: 30 products, 32 views, 128 responsive files.
 
 Track the generated manifest and assets together. `tmp/reports/photo-size-report.json` describes the last run, which may be a selected-product run, not the full library. Original PDFs and large photos are outside the repository and are not needed for normal development/builds. See [Image workflow](image-workflow.md).
 

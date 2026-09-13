@@ -83,6 +83,13 @@ test('language persists and updates search, details and availability labels', as
   await expect(page.locator('h1')).toContainText('Your kind of sip');
   await page.reload();
   await expect(page.locator('[data-category="coffee"]')).toHaveText('Coffee');
+  await expect(page.locator('.category-nav')).toHaveAttribute('aria-label', 'Menu categories');
+  await expect(page.locator('.deals-track')).toHaveAttribute('aria-label', 'Deals');
+  await expect(page.locator('[data-deal-scroll="1"]')).toHaveAttribute('aria-label', 'Next');
+  await expect(page.locator('meta[name=description]')).toHaveAttribute(
+    'content',
+    'Discover coffee, tea, and little bites at Cà Zone.',
+  );
   await page.locator('[data-search]').click();
   await page.locator('#search-input').fill('cacao');
   await expect(page.locator('#search-results')).toContainText('Oreo cacao');

@@ -5,7 +5,7 @@ import { menu } from '../data/menu';
 import { ticketIcon } from './ticketIcon';
 import type { Product } from '../domain/menu';
 import { priceLabel, isAvailable } from '../domain/menu';
-import { ui } from '../i18n/ui';
+import { ui, comboCount as comboCountCopy } from '../i18n/ui';
 import Localized from './Localized.astro';
 import Icon from './Icon.astro';
 import { badgeIcon } from './badgeIcon';
@@ -61,12 +61,7 @@ const comboCount = memberships(menu, campaigns, p).length;
     {comboCount > 0 && (
       <span class="combo-product-note">
         <Fragment set:html={ticketIcon} />
-        <Localized
-          value={{
-            vi: `Có trong ${comboCount} combo`,
-            en: `In ${comboCount} ${comboCount === 1 ? 'combo' : 'combos'}`,
-          }}
-        />
+        <Localized value={comboCountCopy(comboCount)} />
       </span>
     )}
   </span>

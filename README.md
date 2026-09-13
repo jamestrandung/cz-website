@@ -60,7 +60,7 @@ Astro may use port 4321 or the next available port; use the URL it prints. In sa
 
 ## Content and source boundaries
 
-This is a **local preview with 50 menu items from both PDFs and owner corrections**, across nine categories and 68 variants. Product prices, badges, preparation times, and oat-milk substitutions follow the PDF. All seven toppings qualify for the marked M-size free offers, as confirmed by the user. 28 products have real photos; the other 22 use branded category icons. Matcha latte and Cacao sữa have separate hot/iced photo views. Demo stock-out states have been removed. See `docs/CURRENT_PRICING.md` and `docs/PRICING_RULES.md` for current prices and rules.
+This is a **local preview with 50 menu items from both PDFs and owner corrections**, across nine categories and 68 variants. Product prices, badges, preparation times, and oat-milk substitutions follow the PDF. All seven toppings qualify for the marked M-size free offers, as confirmed by the user. 30 products have real photos; the other 20 use branded category icons. Matcha latte and Cacao sữa have separate hot/iced photo views. Demo stock-out states have been removed. See `docs/CURRENT_PRICING.md` and `docs/PRICING_RULES.md` for current prices and rules.
 
 The two supplied map links and Facebook link are active. GrabFood and ShopeeFood still await URLs. No domain or Cloudflare setup is required locally.
 

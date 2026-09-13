@@ -31,8 +31,6 @@ export const ui = {
   catalogEyebrow: t('THỰC ĐƠN NHÀ CÀ', 'THE CÀ ZONE MENU'),
   items: t('món', 'items'),
   variants: t('Kích cỡ & lựa chọn', 'Sizes & varieties'),
-  extras: t('Thêm chút đúng gu', 'Make it your own'),
-  included: t('Đi kèm món', 'Included with your drink'),
   complimentary: t('Miễn phí', 'Complimentary'),
   min: t('phút chuẩn bị', 'min preparation'),
   photoPending: t('Ảnh đang cập nhật', 'Photo coming soon'),
@@ -54,5 +52,30 @@ export const ui = {
     'Cà Zone · coffee, bites & little breaks.',
   ),
   top: t('Về đầu trang', 'Back to top'),
+  metaDescription: t(
+    'Khám phá cà phê, trà và món ngon tại Cà Zone.',
+    'Discover coffee, tea, and little bites at Cà Zone.',
+  ),
+  categoryNav: t('Danh mục', 'Menu categories'),
+  dealsTrack: t('Combos & ưu đãi', 'Deals'),
+  previous: t('Trước', 'Previous'),
+  next: t('Tiếp', 'Next'),
+  from: t('Từ', 'From'),
+  exploreCombo: t('Xem món đi kèm', 'Explore the combo'),
+  inCombo: t('Mua cùng combo', 'Enjoy it in a combo'),
+  comboEyebrow: t('MỘT CHÚT CÀ, THÊM MÓN NGON', 'YOUR SIP, WITH A LITTLE EXTRA'),
+  comboOptions: t('Lựa chọn combo', 'Combo options'),
+  choose: t('Chọn', 'Choose'),
+  choices: t('lựa chọn', 'choices'),
+  includedInCombo: t('Đã bao gồm', 'Included'),
+  viewingItem: t('Món bạn đang xem', 'The item you were viewing'),
+  optionalExtras: t('Thêm theo ý thích', 'Optional extras'),
+  comboFinePrint: t(
+    'Ưu đãi topping và đổi sữa yến mạch vẫn áp dụng theo món nước và kích cỡ đủ điều kiện. Chạm vào món để xem chi tiết. Gọi combo tại quầy.',
+    'Regular topping and oat-milk offers still apply to eligible drinks and sizes. Tap an item for details. Order your combo at the counter.',
+  ),
 };
 export type UiKey = keyof typeof ui;
+// Copy that needs a number cannot be a fixed entry above.
+export const comboCount = (count: number) =>
+  t(`Có trong ${count} combo`, `In ${count} ${count === 1 ? 'combo' : 'combos'}`);

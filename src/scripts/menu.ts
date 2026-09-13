@@ -31,6 +31,8 @@ const arrow =
   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
 let locale: Locale = document.documentElement.lang === 'en' ? 'en' : 'vi';
 const tr = (key: UiKey) => ui[key][locale];
+// For HTML templates: interface copy is escaped like any other inserted text.
+const trHtml = (key: UiKey) => escape(tr(key));
 let currentProduct: Product | null = null;
 let currentPhoto = 0;
 let catalogScroll = 0;
@@ -53,7 +55,7 @@ let overlayState: OverlayState | null = null;
 if (history.state?.czMenu) history.replaceState(null, '');
 
 function rowMarkup(p: Product) {
-  return `<button type="button" class="product-row ${!isAvailable(p) ? 'is-unavailable' : ''}" data-product="${escape(p.id)}" aria-haspopup="dialog"><span class="product-image"><img src="${escape(p.image)}" ${thumbnailSet(p) ? `srcset="${escape(thumbnailSet(p)!)}" sizes="70px"` : ''} alt="" width="240" height="240" loading="lazy" decoding="async"></span><span class="product-copy"><span class="product-name">${escape(p.name[locale])}</span><span class="product-summary">${escape(p.summary[locale])}</span><span class="product-meta"><span class="price">${priceLabel(p)}</span>${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges[0] ? `<span class="badge ${p.badges[0]}">${badgeIcon(p.badges[0])}${tr(p.badges[0])}</span>` : ''}</span>${productComboNote(menu, campaigns, p, locale)}</span><span class="product-open">${arrow}</span></button>`;
+  return `<button type="button" class="product-row ${!isAvailable(p) ? 'is-unavailable' : ''}" data-product="${escape(p.id)}" aria-haspopup="dialog"><span class="product-image"><img src="${escape(p.image)}" ${thumbnailSet(p) ? `srcset="${escape(thumbnailSet(p)!)}" sizes="70px"` : ''} alt="" width="240" height="240" loading="lazy" decoding="async"></span><span class="product-copy"><span class="product-name">${escape(p.name[locale])}</span><span class="product-summary">${escape(p.summary[locale])}</span><span class="product-meta"><span class="price">${priceLabel(p)}</span>${!isAvailable(p) ? `<span class="status">${trHtml('unavailable')}</span>` : p.badges[0] ? `<span class="badge ${p.badges[0]}">${badgeIcon(p.badges[0])}${trHtml(p.badges[0])}</span>` : ''}</span>${productComboNote(menu, campaigns, p, locale)}</span><span class="product-open">${arrow}</span></button>`;
 }
 
 function renderSearch() {
@@ -67,20 +69,20 @@ function renderSearch() {
     feedback.textContent = `${found.length} ${tr('results')}`;
     results.innerHTML = found.length
       ? found.map(rowMarkup).join('')
-      : `<div class="search-no-results"><span aria-hidden="true">⌕</span><h3>${tr('searchEmpty')}</h3><p>${tr('searchEmptyHint')}</p></div>`;
+      : `<div class="search-no-results"><span aria-hidden="true">⌕</span><h3>${trHtml('searchEmpty')}</h3><p>${trHtml('searchEmptyHint')}</p></div>`;
   }
 }
 
 function photoMarkup(p: Product) {
   const photo = p.photos[currentPhoto] ?? p.photos[0];
   if (!photo)
-    return `<div class="detail-placeholder"><img src="${escape(p.image)}" alt="" width="64" height="64"><span>${tr('photoPending')}</span></div>`;
-  return `<div class="detail-art"><img src="${escape(photo.sources[800])}" srcset="${escape(detailSet(photo))}" sizes="(max-width: 700px) min(100vw, 360px), 360px" alt="${escape(photo.alt[locale])}" width="800" height="800" style="object-position:${escape(photo.focalPoint)}"></div>${p.photos.length > 1 ? `<div class="photo-choices" role="group" aria-label="${tr('productPhotos')}">${p.photos.map((item, index) => `<button type="button" data-photo-index="${index}" aria-pressed="${index === currentPhoto}">${escape(item.label?.[locale] ?? String(index + 1))}</button>`).join('')}</div>` : ''}`;
+    return `<div class="detail-placeholder"><img src="${escape(p.image)}" alt="" width="64" height="64"><span>${trHtml('photoPending')}</span></div>`;
+  return `<div class="detail-art"><img src="${escape(photo.sources[800])}" srcset="${escape(detailSet(photo))}" sizes="(max-width: 700px) min(100vw, 360px), 360px" alt="${escape(photo.alt[locale])}" width="800" height="800" style="object-position:${escape(photo.focalPoint)}"></div>${p.photos.length > 1 ? `<div class="photo-choices" role="group" aria-label="${trHtml('productPhotos')}">${p.photos.map((item, index) => `<button type="button" data-photo-index="${index}" aria-pressed="${index === currentPhoto}">${escape(item.label?.[locale] ?? String(index + 1))}</button>`).join('')}</div>` : ''}`;
 }
 
 function renderDetails(p: Product) {
   const category = menu.categories.find((c) => c.id === p.categoryId)!;
-  detailPanel.innerHTML = `<div class="detail-media">${photoMarkup(p)}</div><div class="detail-body"><p class="eyebrow">${escape(stripCaMark(category.name[locale]))}</p><h2 id="detail-title">${escape(p.name[locale])}</h2><p class="detail-description">${escape(p.description[locale])}</p><div class="detail-status">${!isAvailable(p) ? `<span class="status">${tr('unavailable')}</span>` : p.badges.map((b) => `<span class="badge ${b}">${badgeIcon(b)}${tr(b)}</span>`).join('')}${p.preparationMinutes ? `<span class="detail-time">◷ ${p.preparationMinutes} ${tr('min')}</span>` : ''}</div><h3>${tr('variants')}</h3><div>${p.variants.map((v) => `<div class="variant-row ${v.availability === 'unavailable' ? 'variant-muted' : ''}"><div><span class="variant-label">${escape(v.label[locale])}${v.availability === 'unavailable' || p.availability === 'unavailable' ? `<span class="status">${tr('unavailable')}</span>` : ''}</span>${v.benefits.map((b) => `<span class="benefit">↳ ${escape(b.label[locale])}</span>`).join('')}</div><strong>${formatPrice(v.price)}</strong></div>`).join('')}</div>${p.optionGroups.map((g) => `<h3>${escape(g.label[locale])}</h3>${g.choices.map((c) => `<div class="option-row"><span>${escape(c.label[locale])}</span><span>${c.priceDelta === 0 ? tr('complimentary') : `+${formatPrice(c.priceDelta)}`}</span></div>`).join('')}`).join('')}${productComboLinks(menu, campaigns, p, locale)}<p class="detail-note">${tr('detailNote')}</p></div>`;
+  detailPanel.innerHTML = `<div class="detail-media">${photoMarkup(p)}</div><div class="detail-body"><p class="eyebrow">${escape(stripCaMark(category.name[locale]))}</p><h2 id="detail-title">${escape(p.name[locale])}</h2><p class="detail-description">${escape(p.description[locale])}</p><div class="detail-status">${!isAvailable(p) ? `<span class="status">${trHtml('unavailable')}</span>` : p.badges.map((b) => `<span class="badge ${b}">${badgeIcon(b)}${trHtml(b)}</span>`).join('')}${p.preparationMinutes ? `<span class="detail-time">◷ ${p.preparationMinutes} ${trHtml('min')}</span>` : ''}</div><h3>${trHtml('variants')}</h3><div>${p.variants.map((v) => `<div class="variant-row ${v.availability === 'unavailable' ? 'variant-muted' : ''}"><div><span class="variant-label">${escape(v.label[locale])}${v.availability === 'unavailable' || p.availability === 'unavailable' ? `<span class="status">${trHtml('unavailable')}</span>` : ''}</span>${v.benefits.map((b) => `<span class="benefit">↳ ${escape(b.label[locale])}</span>`).join('')}</div><strong>${formatPrice(v.price)}</strong></div>`).join('')}</div>${p.optionGroups.map((g) => `<h3>${escape(g.label[locale])}</h3>${g.choices.map((c) => `<div class="option-row"><span>${escape(c.label[locale])}</span><span>${c.priceDelta === 0 ? trHtml('complimentary') : `+${formatPrice(c.priceDelta)}`}</span></div>`).join('')}`).join('')}${productComboLinks(menu, campaigns, p, locale)}<p class="detail-note">${trHtml('detailNote')}</p></div>`;
 }
 
 function lockCatalog() {
@@ -313,14 +315,7 @@ function applyLocale(next: Locale, preservePosition = false) {
       button.setAttribute('aria-pressed', String(button.dataset.locale === locale)),
     );
   document.title = `Cà Zone — ${tr('menu')}`;
-  document
-    .querySelector('meta[name=description]')!
-    .setAttribute(
-      'content',
-      locale === 'vi'
-        ? 'Khám phá cà phê, trà và món ngon tại Cà Zone.'
-        : 'Discover coffee, tea, and little bites at Cà Zone.',
-    );
+  document.querySelector('meta[name=description]')!.setAttribute('content', tr('metaDescription'));
   closeButton.setAttribute('aria-label', tr('close'));
   backButton.setAttribute('aria-label', tr('back'));
   searchInput.setAttribute('aria-label', tr('search'));
