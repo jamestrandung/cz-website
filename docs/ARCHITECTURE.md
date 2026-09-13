@@ -147,7 +147,7 @@ Full brand doc is WIP; these are the authoritative values until it lands. Update
 | Role | Hex | RGB | CMYK |
 | --- | --- | --- | --- |
 | Primary (yellow) | `#ffbc00` | 255, 191, 0 | 0, 29, 100, 0 |
-| Secondary (charcoal) | `#1c1b24` | 28, 27, 36 | 77, 72, 58, 73 |
+| Secondary (charcoal) | `#1c1123` | 28, 17, 35 | 77, 72, 58, 73 |
 
 ### Logo
 

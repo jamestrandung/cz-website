@@ -57,7 +57,7 @@
   align-items: stretch;
   text-align: left;
   padding: 23px;
-  border: 1px solid #1c1b241c;
+  border: 1px solid #1c11231c;
   border-radius: 6px;
   overflow: hidden;
   color: var(--ink);
@@ -139,7 +139,7 @@
   flex-direction: column;
   gap: 11px;
   padding-top: 16px;
-  border-top: 1px solid #1c1b2433;
+  border-top: 1px solid #1c112333;
 }
 .deal-ink .deal-footer {
   border-color: #ffffff44;
